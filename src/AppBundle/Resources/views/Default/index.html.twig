@@ -1,7 +1,86 @@
 {# src/AppBundle/Resources/views/Default/index.html.twig #}
-{% extends '::base.html.twig' %}
-{% block title %}Default workflow Engine{% endblock %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>{% block title %}Homepage{% endblock %}</title>
+ 
+		<!-- meta -->
+		<meta name="description" content="">
+		<meta name="author" content="">
+ 
+		<!-- mon icon -->
+		<link rel="shortcut icon" href="favicon.ico">
+ 
+		<!-- mon template.css -->
 
-{% block body %}
-    TEST
-{% endblock %}
+		
+		{% block stylesheets %}{% endblock %}
+      	{% javascripts '@AppBundle/Resources/public/bootstrap-3.3.1/dist/js/*' %}
+    			<script type="text/javascript" src="{{ asset_url }}"></script>
+		{% endjavascripts %}
+ 
+	</head>
+ 
+ 	{% block body %}
+	<body>
+ 		{% block header %}
+		<header>
+			<!-- menu du haut -->
+			{% block topnav %}
+			<nav>
+				<ul>
+					<li><a href="mon-url" title="titre-du-lien">nom de mon lien</a></li>
+					<li><a href="mon-url" title="titre-du-lien">nom de mon lien</a></li>
+					<li><a href="mon-url" title="titre-du-lien">nom de mon lien</a></li>
+				</ul>
+			</nav>
+			{% endblock %}
+		</header>
+		{% endblock %}
+ 		{% block dashboard %}
+		<!-- contenu de ma page -->
+		<div>
+			<!-- article n°1 -->
+			<article>
+				<h1>titre de mon article</h1>
+				<p>texte de mon article</p>
+				<section>
+					<h2>sous-titre mon article</h2>
+					<p>texte de mon sous-titre</p>
+					<figure> 
+						<a href="mon-url"><img src="url-de-mon-image" alt="nom-de-mon-image"></a> 
+					</figure> 
+				</section>
+			</article>
+ 
+			<!-- article n°2 -->
+			<article>
+				<h1>titre de mon article</h1>
+				<p>texte de mon article</p>
+				<section>
+					<h2>sous-titre mon article</h2>
+					<p>texte de mon sous-titre</p>
+					<figure> 
+						<a href="mon-url"><img src="url-de-mon-image" alt="nom-de-mon-image"></a> 
+					</figure> 
+				</section>
+			</article>
+		</div>
+ 		{% endblock %}
+ 		{% block footer %}
+		<footer>
+			<!-- menu du bas -->
+			<nav>
+				<ul>
+					<li><a href="mon-url" title="titre-du-lien">nom de mon lien</a></li>
+					<li><a href="mon-url" title="titre-du-lien">nom de mon lien</a></li>
+					<li><a href="mon-url" title="titre-du-lien">nom de mon lien</a></li>
+				</ul>
+			</nav>
+		</footer>
+ 		{% endblock %}
+	</body>
+	{% endblock %}
+ 
+</html>
