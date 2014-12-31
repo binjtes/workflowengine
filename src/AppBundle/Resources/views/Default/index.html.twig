@@ -4,23 +4,22 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>{% block title %}Homepage{% endblock %}</title>
- 
-		<!-- meta -->
-		<meta name="description" content="">
-		<meta name="author" content="">
- 
-		<!-- mon icon -->
-		<link rel="shortcut icon" href="favicon.ico">
- 
-		<!-- mon template.css -->
 
-		
-		{% block stylesheets %}{% endblock %}
-      	{% javascripts '@AppBundle/Resources/public/bootstrap-3.3.1/dist/js/*' %}
-    			<script type="text/javascript" src="{{ asset_url }}"></script>
-		{% endjavascripts %}
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<!-- Bootstrap -->
+    	<link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" media="screen">
+
+    	<!-- HTML5 Shim and Respond.js add IE8 support of HTML5 elements and media queries -->
+    	{% include 'BraincraftedBootstrapBundle::ie8-support.html.twig' %}
+
+</head>
+
+<body>
+
+
  
-	</head>
+
+
  
  	{% block body %}
 	<body>
@@ -28,7 +27,7 @@
 		<header>
 			<!-- menu du haut -->
 			{% block topnav %}
-			<nav>
+			<nav class="navbar">
 				<ul>
 					<li><a href="mon-url" title="titre-du-lien">nom de mon lien</a></li>
 					<li><a href="mon-url" title="titre-du-lien">nom de mon lien</a></li>
@@ -79,7 +78,12 @@
 				</ul>
 			</nav>
 		</footer>
+		   <!-- jQuery (necessary for Bootstraps JavaScript plugins) -->
+    <script src="{{ asset('js/jquery.js') }}"></script>
+    <!-- Include all JavaScripts, compiled by Assetic -->
+    <script src="{{ asset('js/bootstrap.js') }}"></script>		
  		{% endblock %}
+ 		
 	</body>
 	{% endblock %}
  
