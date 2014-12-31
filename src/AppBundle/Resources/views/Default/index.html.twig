@@ -1,7 +1,90 @@
 {# src/AppBundle/Resources/views/Default/index.html.twig #}
-{% extends '::base.html.twig' %}
-{% block title %}Default workflow Engine{% endblock %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>{% block title %}Homepage{% endblock %}</title>
 
-{% block body %}
-    TEST
-{% endblock %}
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    	<!-- Bootstrap -->
+    	<link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" media="screen">
+
+    	<!-- HTML5 Shim and Respond.js add IE8 support of HTML5 elements and media queries -->
+    	{% include 'BraincraftedBootstrapBundle::ie8-support.html.twig' %}
+
+</head>
+
+<body>
+
+
+ 
+
+
+ 
+ 	{% block body %}
+	<body>
+ 		{% block header %}
+		<header>
+			<!-- menu du haut -->
+			{% block topnav %}
+			<nav class="navbar">
+				<ul>
+					<li><a href="mon-url" title="titre-du-lien">nom de mon lien</a></li>
+					<li><a href="mon-url" title="titre-du-lien">nom de mon lien</a></li>
+					<li><a href="mon-url" title="titre-du-lien">nom de mon lien</a></li>
+				</ul>
+			</nav>
+			{% endblock %}
+		</header>
+		{% endblock %}
+ 		{% block dashboard %}
+		<!-- contenu de ma page -->
+		<div>
+			<!-- article n°1 -->
+			<article>
+				<h1>titre de mon article</h1>
+				<p>texte de mon article</p>
+				<section>
+					<h2>sous-titre mon article</h2>
+					<p>texte de mon sous-titre</p>
+					<figure> 
+						<a href="mon-url"><img src="url-de-mon-image" alt="nom-de-mon-image"></a> 
+					</figure> 
+				</section>
+			</article>
+ 
+			<!-- article n°2 -->
+			<article>
+				<h1>titre de mon article</h1>
+				<p>texte de mon article</p>
+				<section>
+					<h2>sous-titre mon article</h2>
+					<p>texte de mon sous-titre</p>
+					<figure> 
+						<a href="mon-url"><img src="url-de-mon-image" alt="nom-de-mon-image"></a> 
+					</figure> 
+				</section>
+			</article>
+		</div>
+ 		{% endblock %}
+ 		{% block footer %}
+		<footer>
+			<!-- menu du bas -->
+			<nav>
+				<ul>
+					<li><a href="mon-url" title="titre-du-lien">nom de mon lien</a></li>
+					<li><a href="mon-url" title="titre-du-lien">nom de mon lien</a></li>
+					<li><a href="mon-url" title="titre-du-lien">nom de mon lien</a></li>
+				</ul>
+			</nav>
+		</footer>
+		   <!-- jQuery (necessary for Bootstraps JavaScript plugins) -->
+    <script src="{{ asset('js/jquery.js') }}"></script>
+    <!-- Include all JavaScripts, compiled by Assetic -->
+    <script src="{{ asset('js/bootstrap.js') }}"></script>		
+ 		{% endblock %}
+ 		
+	</body>
+	{% endblock %}
+ 
+</html>
