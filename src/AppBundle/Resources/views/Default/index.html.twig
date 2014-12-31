@@ -8,7 +8,7 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     	<!-- Bootstrap -->
     	<link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" media="screen">
-
+		<link href="{{ asset('css/workflow_engine.css') }}" rel="stylesheet" media="screen">
     	<!-- HTML5 Shim and Respond.js add IE8 support of HTML5 elements and media queries -->
     	{% include 'BraincraftedBootstrapBundle::ie8-support.html.twig' %}
 
@@ -16,75 +16,56 @@
 
 <body>
 
-
- 
-
-
- 
  	{% block body %}
-	<body>
- 		{% block header %}
-		<header>
+
+ 
 			<!-- menu du haut -->
 			{% block topnav %}
-			<nav class="navbar">
-				<ul>
-					<li><a href="mon-url" title="titre-du-lien">nom de mon lien</a></li>
-					<li><a href="mon-url" title="titre-du-lien">nom de mon lien</a></li>
-					<li><a href="mon-url" title="titre-du-lien">nom de mon lien</a></li>
-				</ul>
-			</nav>
+			{% set navigation = {'admin': 'administration', 'manage' : 'manage workflows' ,'monitoring' : 'monitoring', 'submitting': 'submitting','transcoders': 'transcoders'  }  %}
+		    <nav class="navbar navbar-inverse navbar-fixed-top">
+		      <div class="container">
+		        <div class="navbar-header">
+		          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+		            <span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		          </button>
+		          <a class="navbar-brand" href="{{  path('homepage')  }}">Workflow engine</a>
+		        </div>
+		        <div id="navbar" class="collapse navbar-collapse">
+		          <ul class="nav navbar-nav">
+		     {% for key, item in navigation %}
+		          	<li {% if key == app.request.get('_route') %}  class="active" {% endif %}><a href="{{ key }}">{{ item }}</a></li>
+		       {% endfor %}    	
+		          </ul>
+		        </div><!--/.nav-collapse -->
+		      </div>
+		    </nav>
 			{% endblock %}
-		</header>
-		{% endblock %}
- 		{% block dashboard %}
-		<!-- contenu de ma page -->
-		<div>
-			<!-- article n°1 -->
-			<article>
-				<h1>titre de mon article</h1>
-				<p>texte de mon article</p>
-				<section>
-					<h2>sous-titre mon article</h2>
-					<p>texte de mon sous-titre</p>
-					<figure> 
-						<a href="mon-url"><img src="url-de-mon-image" alt="nom-de-mon-image"></a> 
-					</figure> 
-				</section>
-			</article>
- 
-			<!-- article n°2 -->
-			<article>
-				<h1>titre de mon article</h1>
-				<p>texte de mon article</p>
-				<section>
-					<h2>sous-titre mon article</h2>
-					<p>texte de mon sous-titre</p>
-					<figure> 
-						<a href="mon-url"><img src="url-de-mon-image" alt="nom-de-mon-image"></a> 
-					</figure> 
-				</section>
-			</article>
-		</div>
+	
+		
+ 		{% block container %}
+   		 <div class="container">
+
+		      <div class="workflow_engine-template">
+		        <h1>Welcome to the workflow engine</h1>
+		        <span class="label label-info">Info</span>
+		        <p class="lead">The workflow engine is a work in progress.</p>
+		      </div>
+
+    	</div><!-- /.container -->
  		{% endblock %}
  		{% block footer %}
-		<footer>
-			<!-- menu du bas -->
-			<nav>
-				<ul>
-					<li><a href="mon-url" title="titre-du-lien">nom de mon lien</a></li>
-					<li><a href="mon-url" title="titre-du-lien">nom de mon lien</a></li>
-					<li><a href="mon-url" title="titre-du-lien">nom de mon lien</a></li>
-				</ul>
-			</nav>
-		</footer>
+		{% endblock %}
 		   <!-- jQuery (necessary for Bootstraps JavaScript plugins) -->
     <script src="{{ asset('js/jquery.js') }}"></script>
     <!-- Include all JavaScripts, compiled by Assetic -->
     <script src="{{ asset('js/bootstrap.js') }}"></script>		
- 		{% endblock %}
+
  		
-	</body>
+
+	
 	{% endblock %}
- 
+ 	</body>
 </html>

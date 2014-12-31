@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="RPublishingWorkflow" table="r_publishing_workflow">
+    <indexes>
+      <index name="publishing_workflow_FKIndex1" columns="publishing_id"/>
+    </indexes>
+    <id name="workflowId" type="integer" column="workflow_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="name" type="string" column="name" length="255" nullable="true"/>
+    <field name="description" type="string" column="description" length="255" nullable="true"/>
+    <field name="auto" type="boolean" column="auto" nullable="false"/>
+    <field name="farmId" type="integer" column="farm_id" nullable="false"/>
+    <field name="stub" type="string" column="stub" length="45" nullable="true"/>
+    <field name="isConcat" type="boolean" column="is_concat" nullable="false"/>
+    <many-to-one field="publishing" target-entity="RPublishing">
+      <join-columns>
+        <join-column name="publishing_id" referenced-column-name="publishing_id"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-many field="ruleType" target-entity="RPublishingRuleType" inversed-by="workflow">
+      <join-table name="r_publishing_rule">
+        <join-columns>
+          <join-column name="workflow_id" referenced-column-name="workflow_id"/>
+        </join-columns>
+        <inverse-join-columns>
+          <join-column name="rule_type_id" referenced-column-name="rule_type_id"/>
+        </inverse-join-columns>
+      </join-table>
+    </many-to-many>
+  </entity>
+</doctrine-mapping>

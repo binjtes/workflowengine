@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="RPublishingLanguage" table="r_publishing_language">
+    <indexes>
+      <index name="r_publishing_language_FKIndex1" columns="workflow_id"/>
+      <index name="fk_r_publishing_language_r_lng_language1_idx" columns="lng_mixnews_iid"/>
+    </indexes>
+    <id name="rPublishingLanguageId" type="integer" column="r_publishing_language_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <many-to-one field="workflow" target-entity="RPublishingWorkflow">
+      <join-columns>
+        <join-column name="workflow_id" referenced-column-name="workflow_id"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="lngMixnewsIid" target-entity="RLngLanguage">
+      <join-columns>
+        <join-column name="lng_mixnews_iid" referenced-column-name="lng_mixnews_iid"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

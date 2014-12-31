@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="PublicationTask" table="publication_task">
+    <indexes>
+      <index name="publishing_task_FKIndex2" columns="id_status"/>
+      <index name="publishing_task_FKIndex3" columns="tasktempl_id"/>
+      <index name="fk_publication_task_publication_workflow1_idx" columns="publication_id"/>
+    </indexes>
+    <id name="publicationTaskId" type="integer" column="publication_task_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="tasktemplId" type="integer" column="tasktempl_id" nullable="false"/>
+    <field name="position" type="integer" column="position" nullable="true"/>
+    <field name="product" type="text" column="product" length="65535" nullable="true"/>
+    <field name="jobId" type="string" column="job_id" length="255" nullable="true"/>
+    <field name="serviceUrl" type="text" column="service_url" length="65535" nullable="true"/>
+    <field name="message" type="text" column="message" length="65535" nullable="true"/>
+    <field name="lastRun" type="datetime" column="last_run" nullable="true"/>
+    <many-to-one field="publication" target-entity="PublicationWorkflow">
+      <join-columns>
+        <join-column name="publication_id" referenced-column-name="publication_id"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="idStatus" target-entity="PublicationStatus">
+      <join-columns>
+        <join-column name="id_status" referenced-column-name="id_status"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

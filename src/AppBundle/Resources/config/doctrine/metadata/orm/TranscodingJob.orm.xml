@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="TranscodingJob" table="transcoding_job">
+    <indexes>
+      <index name="transcoding_job_FKIndex2" columns="id_machine"/>
+      <index name="transcoding_job_FKIndex3" columns="id_factory"/>
+      <index name="transcoding_job_FKIndex4" columns="publication_task_id"/>
+      <index name="fk_transcoding_job_r_transcoding_status1_idx" columns="id_jobstatus"/>
+    </indexes>
+    <id name="idJob" type="integer" column="id_job">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="idMachine" type="integer" column="id_machine" nullable="false"/>
+    <field name="videoName" type="string" column="video_name" length="255" nullable="true"/>
+    <field name="scheduled" type="datetime" column="scheduled" nullable="true"/>
+    <field name="submittedBy" type="integer" column="submitted_by" nullable="true"/>
+    <field name="uuid" type="string" column="uuid" length="45" nullable="true"/>
+    <field name="submittedAt" type="datetime" column="submitted_at" nullable="false"/>
+    <field name="videoDuration" type="integer" column="video_duration" nullable="true"/>
+    <field name="errorLog" type="string" column="error_log" length="255" nullable="true"/>
+    <many-to-one field="idJobstatus" target-entity="RTranscodingStatus">
+      <join-columns>
+        <join-column name="id_jobstatus" referenced-column-name="id_jobstatus"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="idFactory" target-entity="RTranscodingFactory">
+      <join-columns>
+        <join-column name="id_factory" referenced-column-name="id_factory"/>
+      </join-columns>
+    </many-to-one>
+    <many-to-one field="publicationTask" target-entity="PublicationTask">
+      <join-columns>
+        <join-column name="publication_task_id" referenced-column-name="publication_task_id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

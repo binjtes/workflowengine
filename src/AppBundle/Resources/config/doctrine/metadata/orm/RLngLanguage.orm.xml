@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="RLngLanguage" table="r_lng_language">
+    <unique-constraints>
+      <unique-constraint name="lng_mixnews_iid_UNIQUE" columns="lng_mixnews_iid"/>
+    </unique-constraints>
+    <id name="lngIid" type="integer" column="lng_iid">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="lngSalias" type="string" column="lng_salias" length="2" nullable="false"/>
+    <field name="lngHarris" type="string" column="lng_harris" length="2" nullable="true"/>
+    <field name="lngFullname" type="text" column="lng_fullname" length="65535" nullable="false"/>
+    <field name="lngRtl" type="boolean" column="lng_rtl" nullable="false"/>
+    <field name="live" type="boolean" column="live" nullable="false"/>
+    <field name="lngSubdomain" type="string" column="lng_subdomain" length="45" nullable="false"/>
+    <field name="lngCollateLocale" type="string" column="lng_collate_locale" length="55" nullable="true"/>
+    <field name="lngDrupalCode" type="string" column="lng_drupal_code" length="10" nullable="true"/>
+    <field name="position" type="boolean" column="position" nullable="true"/>
+    <field name="lngMixnewsIid" type="integer" column="lng_mixnews_iid" nullable="false"/>
+  </entity>
+</doctrine-mapping>

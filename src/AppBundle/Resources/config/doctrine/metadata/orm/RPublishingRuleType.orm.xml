@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="RPublishingRuleType" table="r_publishing_rule_type">
+    <id name="ruleTypeId" type="integer" column="rule_type_id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="ruleTypeDescription" type="string" column="rule_type_description" length="255" nullable="true"/>
+    <field name="serviceUrl" type="string" column="service_url" length="500" nullable="false"/>
+    <many-to-many field="workflow" target-entity="RPublishingWorkflow" mapped-by="ruleType"/>
+  </entity>
+</doctrine-mapping>
