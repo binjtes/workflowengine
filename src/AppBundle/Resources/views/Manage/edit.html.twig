@@ -1,0 +1,55 @@
+{# src/AppBundle/Resources/views/Manage/index.html.twig #}
+{% extends 'AppBundle:Manage:index.html.twig' %}
+{% block title %}Edit Workflows{% endblock %}
+
+{% block container %}
+   		 <div class="container">
+
+		      <div class="workflow_engine-template">
+		        <h1>Edit a workflow <span class="glyphicon glyphicon-tower" aria-hidden="true"></span></h1>
+		        
+		        {% for edit in editworkflow %}
+		     	<h2> {{ edit.name }}</h2>
+		        
+		       {% endfor %}
+		       
+		        <span class="label label-info">Info</span>
+		        <p class="lead">The workflow engine is a work in progress.</p>
+		      </div>
+		      
+  				<div class="row">
+      				<div class="col-xs-6 col-md-7">publishing workflows</div>
+		      	</div>
+		      	<table class="table table-hover">
+		      	<thead>
+		      	<th>Id</th>
+		      	<th>Family</th>
+				<th>Name</th>
+				<th>stub</th>
+				<th>runs on thread </th>
+				<th>is auto </th>
+				<th>is concat </th>
+		      	
+		      	</thead>
+		      	<tbody>
+		   
+				{% for rpublishingworkflow in rpublishingworkflows %}
+				<tr>
+					<td>{{ rpublishingworkflow.workflowId }} </td>
+					<td>{{ rpublishingworkflow.publishing.name }} </td>
+					<td>{{ rpublishingworkflow.name }} </td>
+					<td>{{ rpublishingworkflow.stub}} </td>
+					<td>{{ rpublishingworkflow.farmId}} </td>
+					<td>{{ rpublishingworkflow.auto}} </td>
+					<td>{{ rpublishingworkflow.isConcat}} </td>
+				</tr>
+				{% endfor %}
+
+				</tbody>
+				</table>
+				
+    	</div><!-- /.container -->
+    	{% include 'BraincraftedBootstrapBundle::flash.html.twig' %}
+ 		{% endblock %}
+
+

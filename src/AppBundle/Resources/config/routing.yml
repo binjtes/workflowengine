@@ -6,7 +6,10 @@ admin:
     defaults: { _controller: AppBundle:Admin:index }    
 manage:
     path:     /manage
-    defaults: { _controller: AppBundle:Manage:index } 
+    defaults: { _controller: AppBundle:Manage:index  } 
+manage_edit:
+    path:     /manage/edit/{workflowid}
+    defaults: { _controller: AppBundle:Manage:edit  }             
 monitoring:
     path:     /monitoring
     defaults: { _controller: AppBundle:Monitoring:index }     
