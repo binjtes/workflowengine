@@ -53,6 +53,7 @@ class RPublishingWorkflow
      * @var string
      *
      * @ORM\Column(name="stub", type="string", length=45, nullable=true)
+     *
      */
     private $stub;
 

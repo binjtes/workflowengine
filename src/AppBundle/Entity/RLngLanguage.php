@@ -7,17 +7,27 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * RLngLanguage
  *
- * @ORM\Table(name="r_lng_language", uniqueConstraints={@ORM\UniqueConstraint(name="lng_mixnews_iid_UNIQUE", columns={"lng_mixnews_iid"})})
+ * @ORM\Table(name="r_lng_language", uniqueConstraints={@ORM\UniqueConstraint(name="lng_iid_UNIQUE", columns={"lng_iid"})})
  * @ORM\Entity
  */
 class RLngLanguage
 {
+	
+	/**
+	 * @var integer
+	 *
+	 * @ORM\Column(name="lng_mixnews_iid", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+	 */
+	private $lngMixnewsIid = '1';
+	
+	
     /**
      * @var integer
      *
      * @ORM\Column(name="lng_iid", type="integer", nullable=false)
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="IDENTITY")
+     * 
      */
     private $lngIid;
 
@@ -84,12 +94,7 @@ class RLngLanguage
      */
     private $position;
 
-    /**
-     * @var integer
-     *
-     * @ORM\Column(name="lng_mixnews_iid", type="integer", nullable=false)
-     */
-    private $lngMixnewsIid = '1';
+
 
 
 

@@ -28,11 +28,11 @@
 		      	
 		      	</thead>
 		      	<tbody>
-		      	
+		      
 				{% for rpublishingworkflow in rpublishingworkflows %}
-				<tr>
+				<tr >
 					<td>{{ rpublishingworkflow.workflowId }} </td>
-					<td>{{ rpublishingworkflow.publishing.name }} </td>
+					<td ><a href="{{ path('manage_edit', {'wokflowid': rpublishingworkflow.workflowId}) }}">{{ rpublishingworkflow.publishing.name }}</a> </td>
 					<td>{{ rpublishingworkflow.name }} </td>
 					<td>{{ rpublishingworkflow.stub}} </td>
 					<td>{{ rpublishingworkflow.farmId}} </td>

@@ -92,4 +92,7 @@ class RPublishing
     {
         return $this->description;
     }
+    
+
+    
 }

@@ -8,14 +8,22 @@
 		      <div class="workflow_engine-template">
 		        <h1>Edit a workflow <span class="glyphicon glyphicon-tower" aria-hidden="true"></span></h1>
 		        
-		        {% for edit in editworkflow %}
-		     	<h2> {{ edit.name }}</h2>
-		        
-		       {% endfor %}
+   		{{ form_start(form) }}
+		    {{ form_errors(form) }}		
+		    {{ form_row(form.name) }}
+		    {{ form_row(form.description) }}
+			{{ form_row(form.stub) }}
+			{{ form_row(form.publishing) }}
+			{{ form_row(form.auto) }}
+			{{ form_row(form.isConcat) }}
+			{{ form_row(form.ruleType) }}
+			{{ form_row(form.farmId) }}
+		    <input type="submit" />
+		{{ form_end(form) }}
 		       
-		        <span class="label label-info">Info</span>
-		        <p class="lead">The workflow engine is a work in progress.</p>
-		      </div>
+		       
+		       
+		        </div>
 		      
   				<div class="row">
       				<div class="col-xs-6 col-md-7">publishing workflows</div>
