@@ -38,14 +38,14 @@ class RPublishingWorkflow
     /**
      * @var boolean
      *
-     * @ORM\Column(name="auto", type="boolean", nullable=false)
+     * @ORM\Column(name="auto", type="boolean", nullable=false ,options={"default":0})
      */
     private $auto = '1';
 
     /**
      * @var integer
      *
-     * @ORM\Column(name="farm_id", type="integer", nullable=false)
+     * @ORM\Column(name="farm_id", type="integer", nullable=false,options={"default":0})
      */
     private $farmId = '1';
 

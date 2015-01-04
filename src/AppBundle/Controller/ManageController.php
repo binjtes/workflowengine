@@ -18,22 +18,41 @@ class ManageController extends Controller
     /**
      * @Route("/manage", name="manage")
      */
-    public function indexAction()
+    public function indexAction(Request $request)
     {
     	
     	/* XXX see how this works
     	$flash = $this->get('braincrafted_bootstrap.flash');
     	$flash->alert('This is an alert flash message.');
     	*/
+    	
+    	//add an empty form for creating workflow 
+    	$workflow = new RPublishingWorkflow();
+    	$form = $this->createForm(new RworkflowType());
+    	/* STOCKED HERE ... 
+    	$form = $this->createForm(new RworkflowType(),$workflow);
+    	
+    	$form->handleRequest($request);
+    	// once updated , redirection to index manage page (listing)
+    	if ($form->isValid()) {
+    		$em = $this->getDoctrine()->getManager();
+    		$em->persist($workflow);
+    		$em->flush();
+    	
+    		$msg = "yep ,The workflow has been updated" ;
+    	
+    	}
+    	*/
+    	
     	$rpublishingworkflows = $this->getDoctrine()->getRepository('AppBundle:RPublishingWorkflow')->findAll(); 
-        return $this->render('AppBundle:Manage:index.html.twig', array('rpublishingworkflows'=>$rpublishingworkflows));
+        return $this->render('AppBundle:Manage:index.html.twig', array('form' => $form->createView(), 'rpublishingworkflows'=>$rpublishingworkflows));
     }
     
 
     /**
      * @Route("/manage/edit/{workflowid}", name="manage_edit")
      */
-    public function editAction($workflowid=1 ){
+    public function editAction($workflowid = 1 ){
     	
     	$editworkflow = $this->getDoctrine()->getRepository('AppBundle:RPublishingWorkflow')->find($workflowid);
     	
