@@ -19,7 +19,9 @@
  
 		      	</div>
 		      	<div class="row">
-		      	<button type="button" id="createbutton" class="btn btn-default">{% trans with {'%item%': 'workflow'} from "form" %}create a new %item%{% endtrans %}</button>
+		      	<button class="btn btn-primary" id="createbutton" ><span class="glyphicon glyphicon-plus-sign"></span>{% trans with {'%item%': 'workflow'} from "form" %} Create a new %item%{% endtrans %}</button>
+		      	
+		      	
 		      	</div>
 		      	<div class="row" id="formhidden">
 		      		<!--  form to create a workflow  -->
@@ -48,7 +50,8 @@
 				<th>runs on thread </th>
 				<th>is auto </th>
 				<th>is concat </th>
-		      	
+		      	<th>Edit workflow</th>
+		      	<th>delete workflow</th>
 		      	</thead>
 		      	<tbody>
 		      	
@@ -59,8 +62,10 @@
 					<td><a href="{{ path('manage_edit', {'workflowid': rpublishingworkflow.workflowId}) }}">{{ rpublishingworkflow.name }}</a></td>
 					<td>{{ rpublishingworkflow.stub}} </td>
 					<td>{{ rpublishingworkflow.farmId}} </td>
-					<td>{{ rpublishingworkflow.auto}} </td>
-					<td>{{ rpublishingworkflow.isConcat}} </td>
+					<td>{{ rpublishingworkflow.auto ? '<button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-ok-sign"></span></button> ' : '' }} </td>
+					<td>{{ rpublishingworkflow.isConcat ? '<button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-ok-sign"></span></button> ' : ''}} </td>
+					<td><a href="{{ path('manage_edit', {'workflowid': rpublishingworkflow.workflowId}) }}" class="btn btn-primary" ><span class="glyphicon glyphicon-pencil"></span> Edit</a> </td>
+					<td><a href="{{ path('manage_delete', {'workflowid': rpublishingworkflow.workflowId}) }}"" class="btn btn-danger" ><span class="glyphicon glyphicon-remove-sign"></span> Delete </a></td>
 				</tr>
 				{% endfor %}
 			

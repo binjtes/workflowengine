@@ -80,34 +80,18 @@ class ManageController extends Controller
     }
   
     /**
-     * @Route("/manage/update", name="manage_update")
-     */   
-    public function updateAction(Request $request){
-    	$workflow = new RPublishingWorkflow() ; 
-    	
-    	   	
-    	$form = $this->createForm(new RworkflowType());
-    	
-    	$form->handleRequest($request); 
-    	// once updated , redirection to index manage page (listing) 
-    	if ($form->isValid()) {
-    		$em = $this->getDoctrine()->getManager();
-    		$em->flush();
-    		
-			$this->get('session')->getFlashBag()->add('notice', 'Vos changements ont été sauvegardés!');
-    		
-    		
-    	}else{
-    		$msg = "Something wrong happened" ;
-    	}
-    	
-    	return $this->redirect($this->generateUrl('manage', array('msg'=>$msg)));
-    }
-    /**
-     * @Route("/manage/delete", name="manage_delete")
+     * @Route("/manage/delete/{workflowid}", name="manage_delete")
      */
-    public function deleteAction(){
-    
+    public function deleteAction($workflowid){
+    	$workflow = $this->getDoctrine()->getRepository('AppBundle:RPublishingWorkflow')->find($workflowid);
+    	
+    	if (!$workflow) {
+    		throw $this->createNotFoundException('No workflow found for id '.$workflowid);
+    	}
+    	$em->remove($workflow);
+    	$em->flush();
+    	$this->get('session')->getFlashBag()->add('notice', 'Le workflow  a été suprimé');
+    	return $this->redirect( $this->generateUrl('manage'));
     
     }
     

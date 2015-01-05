@@ -18,13 +18,21 @@
 			{{ form_row(form.isConcat) }}
 			{{ form_row(form.ruleType) }}
 			{{ form_row(form.farmId) }}
-		    <input type="submit" />
+			
+			<div class="btn-group" role="group" aria-label="">
+			  <input class="btn btn-primary " value="Update" type="submit" >
+			
+			</div>
+	
+			
+		  
+		   
 		{{ form_end(form) }}
 		       
 		       
 		       
 		        </div>
-		      
+		     
 
     	</div><!-- /.container -->
     	{% include 'BraincraftedBootstrapBundle::flash.html.twig' %}

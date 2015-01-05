@@ -10,16 +10,9 @@ manage:
 manage_edit:
     path:     /manage/edit/{workflowid}
     defaults: { _controller: AppBundle:Manage:edit  } 
-manage_create:
-    path:     /manage/create/
-    defaults: { _controller: AppBundle:Manage:create  }
-manage_update:
-    path:     /manage/update/
-    defaults: { _controller: AppBundle:Manage:update  } 
 manage_delete:
-    path:     /manage/delete/
+    path:     /manage/delete/{workflowid}
     defaults: { _controller: AppBundle:Manage:delete  }      
-                              
 monitoring:
     path:     /monitoring
     defaults: { _controller: AppBundle:Monitoring:index }     

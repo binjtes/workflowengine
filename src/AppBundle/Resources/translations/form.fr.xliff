@@ -4,8 +4,8 @@
     <file source-language="en" datatype="plaintext" original="file.ext">
         <body>
             <trans-unit id="1">
-                <source>create a new %item%</source>
-                <target>créer un nouveau %item%</target>
+                <source> Create a new %item%</source>
+                <target> crÃ©er un nouveau %item%</target>
             </trans-unit>
         </body>
     </file>
