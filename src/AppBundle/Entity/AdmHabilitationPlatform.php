@@ -29,4 +29,37 @@ class AdmHabilitationPlatform
     private $platformLabel;
 
 
+
+    /**
+     * Get idPlatform
+     *
+     * @return integer 
+     */
+    public function getIdPlatform()
+    {
+        return $this->idPlatform;
+    }
+
+    /**
+     * Set platformLabel
+     *
+     * @param string $platformLabel
+     * @return AdmHabilitationPlatform
+     */
+    public function setPlatformLabel($platformLabel)
+    {
+        $this->platformLabel = $platformLabel;
+
+        return $this;
+    }
+
+    /**
+     * Get platformLabel
+     *
+     * @return string 
+     */
+    public function getPlatformLabel()
+    {
+        return $this->platformLabel;
+    }
 }

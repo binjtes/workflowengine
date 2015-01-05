@@ -36,4 +36,60 @@ class RTranscodingFileStatus
     private $sgiStatus;
 
 
+
+    /**
+     * Get idFilestatus
+     *
+     * @return integer 
+     */
+    public function getIdFilestatus()
+    {
+        return $this->idFilestatus;
+    }
+
+    /**
+     * Set labelStatus
+     *
+     * @param string $labelStatus
+     * @return RTranscodingFileStatus
+     */
+    public function setLabelStatus($labelStatus)
+    {
+        $this->labelStatus = $labelStatus;
+
+        return $this;
+    }
+
+    /**
+     * Get labelStatus
+     *
+     * @return string 
+     */
+    public function getLabelStatus()
+    {
+        return $this->labelStatus;
+    }
+
+    /**
+     * Set sgiStatus
+     *
+     * @param string $sgiStatus
+     * @return RTranscodingFileStatus
+     */
+    public function setSgiStatus($sgiStatus)
+    {
+        $this->sgiStatus = $sgiStatus;
+
+        return $this;
+    }
+
+    /**
+     * Get sgiStatus
+     *
+     * @return string 
+     */
+    public function getSgiStatus()
+    {
+        return $this->sgiStatus;
+    }
 }

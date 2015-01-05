@@ -36,4 +36,60 @@ class RPublishing
     private $description;
 
 
+
+    /**
+     * Get publishingId
+     *
+     * @return integer 
+     */
+    public function getPublishingId()
+    {
+        return $this->publishingId;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     * @return RPublishing
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string 
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     * @return RPublishing
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string 
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
 }

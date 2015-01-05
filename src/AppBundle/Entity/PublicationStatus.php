@@ -29,4 +29,37 @@ class PublicationStatus
     private $description;
 
 
+
+    /**
+     * Get idStatus
+     *
+     * @return integer 
+     */
+    public function getIdStatus()
+    {
+        return $this->idStatus;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     * @return PublicationStatus
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string 
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
 }

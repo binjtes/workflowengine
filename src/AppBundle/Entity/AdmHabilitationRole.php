@@ -68,4 +68,165 @@ class AdmHabilitationRole
     private $access;
 
 
+
+    /**
+     * Set idRole
+     *
+     * @param integer $idRole
+     * @return AdmHabilitationRole
+     */
+    public function setIdRole($idRole)
+    {
+        $this->idRole = $idRole;
+
+        return $this;
+    }
+
+    /**
+     * Get idRole
+     *
+     * @return integer 
+     */
+    public function getIdRole()
+    {
+        return $this->idRole;
+    }
+
+    /**
+     * Set module
+     *
+     * @param string $module
+     * @return AdmHabilitationRole
+     */
+    public function setModule($module)
+    {
+        $this->module = $module;
+
+        return $this;
+    }
+
+    /**
+     * Get module
+     *
+     * @return string 
+     */
+    public function getModule()
+    {
+        return $this->module;
+    }
+
+    /**
+     * Set page
+     *
+     * @param string $page
+     * @return AdmHabilitationRole
+     */
+    public function setPage($page)
+    {
+        $this->page = $page;
+
+        return $this;
+    }
+
+    /**
+     * Get page
+     *
+     * @return string 
+     */
+    public function getPage()
+    {
+        return $this->page;
+    }
+
+    /**
+     * Set insert
+     *
+     * @param integer $insert
+     * @return AdmHabilitationRole
+     */
+    public function setInsert($insert)
+    {
+        $this->insert = $insert;
+
+        return $this;
+    }
+
+    /**
+     * Get insert
+     *
+     * @return integer 
+     */
+    public function getInsert()
+    {
+        return $this->insert;
+    }
+
+    /**
+     * Set update
+     *
+     * @param integer $update
+     * @return AdmHabilitationRole
+     */
+    public function setUpdate($update)
+    {
+        $this->update = $update;
+
+        return $this;
+    }
+
+    /**
+     * Get update
+     *
+     * @return integer 
+     */
+    public function getUpdate()
+    {
+        return $this->update;
+    }
+
+    /**
+     * Set delete
+     *
+     * @param integer $delete
+     * @return AdmHabilitationRole
+     */
+    public function setDelete($delete)
+    {
+        $this->delete = $delete;
+
+        return $this;
+    }
+
+    /**
+     * Get delete
+     *
+     * @return integer 
+     */
+    public function getDelete()
+    {
+        return $this->delete;
+    }
+
+    /**
+     * Set access
+     *
+     * @param integer $access
+     * @return AdmHabilitationRole
+     */
+    public function setAccess($access)
+    {
+        $this->access = $access;
+
+        return $this;
+    }
+
+    /**
+     * Get access
+     *
+     * @return integer 
+     */
+    public function getAccess()
+    {
+        return $this->access;
+    }
 }

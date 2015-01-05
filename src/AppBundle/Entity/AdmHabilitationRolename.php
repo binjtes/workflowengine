@@ -64,4 +64,152 @@ class AdmHabilitationRolename
     private $dateModification;
 
 
+
+    /**
+     * Get idRole
+     *
+     * @return integer 
+     */
+    public function getIdRole()
+    {
+        return $this->idRole;
+    }
+
+    /**
+     * Set roleName
+     *
+     * @param string $roleName
+     * @return AdmHabilitationRolename
+     */
+    public function setRoleName($roleName)
+    {
+        $this->roleName = $roleName;
+
+        return $this;
+    }
+
+    /**
+     * Get roleName
+     *
+     * @return string 
+     */
+    public function getRoleName()
+    {
+        return $this->roleName;
+    }
+
+    /**
+     * Set roleDescription
+     *
+     * @param string $roleDescription
+     * @return AdmHabilitationRolename
+     */
+    public function setRoleDescription($roleDescription)
+    {
+        $this->roleDescription = $roleDescription;
+
+        return $this;
+    }
+
+    /**
+     * Get roleDescription
+     *
+     * @return string 
+     */
+    public function getRoleDescription()
+    {
+        return $this->roleDescription;
+    }
+
+    /**
+     * Set createdBy
+     *
+     * @param integer $createdBy
+     * @return AdmHabilitationRolename
+     */
+    public function setCreatedBy($createdBy)
+    {
+        $this->createdBy = $createdBy;
+
+        return $this;
+    }
+
+    /**
+     * Get createdBy
+     *
+     * @return integer 
+     */
+    public function getCreatedBy()
+    {
+        return $this->createdBy;
+    }
+
+    /**
+     * Set dateCreation
+     *
+     * @param \DateTime $dateCreation
+     * @return AdmHabilitationRolename
+     */
+    public function setDateCreation($dateCreation)
+    {
+        $this->dateCreation = $dateCreation;
+
+        return $this;
+    }
+
+    /**
+     * Get dateCreation
+     *
+     * @return \DateTime 
+     */
+    public function getDateCreation()
+    {
+        return $this->dateCreation;
+    }
+
+    /**
+     * Set modifiedBy
+     *
+     * @param integer $modifiedBy
+     * @return AdmHabilitationRolename
+     */
+    public function setModifiedBy($modifiedBy)
+    {
+        $this->modifiedBy = $modifiedBy;
+
+        return $this;
+    }
+
+    /**
+     * Get modifiedBy
+     *
+     * @return integer 
+     */
+    public function getModifiedBy()
+    {
+        return $this->modifiedBy;
+    }
+
+    /**
+     * Set dateModification
+     *
+     * @param \DateTime $dateModification
+     * @return AdmHabilitationRolename
+     */
+    public function setDateModification($dateModification)
+    {
+        $this->dateModification = $dateModification;
+
+        return $this;
+    }
+
+    /**
+     * Get dateModification
+     *
+     * @return \DateTime 
+     */
+    public function getDateModification()
+    {
+        return $this->dateModification;
+    }
 }

@@ -57,4 +57,129 @@ class AdmGroups2
     private $idModif;
 
 
+
+    /**
+     * Get idGrp
+     *
+     * @return integer 
+     */
+    public function getIdGrp()
+    {
+        return $this->idGrp;
+    }
+
+    /**
+     * Set libGrp
+     *
+     * @param string $libGrp
+     * @return AdmGroups2
+     */
+    public function setLibGrp($libGrp)
+    {
+        $this->libGrp = $libGrp;
+
+        return $this;
+    }
+
+    /**
+     * Get libGrp
+     *
+     * @return string 
+     */
+    public function getLibGrp()
+    {
+        return $this->libGrp;
+    }
+
+    /**
+     * Set dtCrea
+     *
+     * @param \DateTime $dtCrea
+     * @return AdmGroups2
+     */
+    public function setDtCrea($dtCrea)
+    {
+        $this->dtCrea = $dtCrea;
+
+        return $this;
+    }
+
+    /**
+     * Get dtCrea
+     *
+     * @return \DateTime 
+     */
+    public function getDtCrea()
+    {
+        return $this->dtCrea;
+    }
+
+    /**
+     * Set idCrea
+     *
+     * @param integer $idCrea
+     * @return AdmGroups2
+     */
+    public function setIdCrea($idCrea)
+    {
+        $this->idCrea = $idCrea;
+
+        return $this;
+    }
+
+    /**
+     * Get idCrea
+     *
+     * @return integer 
+     */
+    public function getIdCrea()
+    {
+        return $this->idCrea;
+    }
+
+    /**
+     * Set dtModif
+     *
+     * @param \DateTime $dtModif
+     * @return AdmGroups2
+     */
+    public function setDtModif($dtModif)
+    {
+        $this->dtModif = $dtModif;
+
+        return $this;
+    }
+
+    /**
+     * Get dtModif
+     *
+     * @return \DateTime 
+     */
+    public function getDtModif()
+    {
+        return $this->dtModif;
+    }
+
+    /**
+     * Set idModif
+     *
+     * @param integer $idModif
+     * @return AdmGroups2
+     */
+    public function setIdModif($idModif)
+    {
+        $this->idModif = $idModif;
+
+        return $this;
+    }
+
+    /**
+     * Get idModif
+     *
+     * @return integer 
+     */
+    public function getIdModif()
+    {
+        return $this->idModif;
+    }
 }

@@ -108,4 +108,267 @@ class TranscodingJob
     private $publicationTask;
 
 
+
+    /**
+     * Get idJob
+     *
+     * @return integer 
+     */
+    public function getIdJob()
+    {
+        return $this->idJob;
+    }
+
+    /**
+     * Set idMachine
+     *
+     * @param integer $idMachine
+     * @return TranscodingJob
+     */
+    public function setIdMachine($idMachine)
+    {
+        $this->idMachine = $idMachine;
+
+        return $this;
+    }
+
+    /**
+     * Get idMachine
+     *
+     * @return integer 
+     */
+    public function getIdMachine()
+    {
+        return $this->idMachine;
+    }
+
+    /**
+     * Set videoName
+     *
+     * @param string $videoName
+     * @return TranscodingJob
+     */
+    public function setVideoName($videoName)
+    {
+        $this->videoName = $videoName;
+
+        return $this;
+    }
+
+    /**
+     * Get videoName
+     *
+     * @return string 
+     */
+    public function getVideoName()
+    {
+        return $this->videoName;
+    }
+
+    /**
+     * Set scheduled
+     *
+     * @param \DateTime $scheduled
+     * @return TranscodingJob
+     */
+    public function setScheduled($scheduled)
+    {
+        $this->scheduled = $scheduled;
+
+        return $this;
+    }
+
+    /**
+     * Get scheduled
+     *
+     * @return \DateTime 
+     */
+    public function getScheduled()
+    {
+        return $this->scheduled;
+    }
+
+    /**
+     * Set submittedBy
+     *
+     * @param integer $submittedBy
+     * @return TranscodingJob
+     */
+    public function setSubmittedBy($submittedBy)
+    {
+        $this->submittedBy = $submittedBy;
+
+        return $this;
+    }
+
+    /**
+     * Get submittedBy
+     *
+     * @return integer 
+     */
+    public function getSubmittedBy()
+    {
+        return $this->submittedBy;
+    }
+
+    /**
+     * Set uuid
+     *
+     * @param string $uuid
+     * @return TranscodingJob
+     */
+    public function setUuid($uuid)
+    {
+        $this->uuid = $uuid;
+
+        return $this;
+    }
+
+    /**
+     * Get uuid
+     *
+     * @return string 
+     */
+    public function getUuid()
+    {
+        return $this->uuid;
+    }
+
+    /**
+     * Set submittedAt
+     *
+     * @param \DateTime $submittedAt
+     * @return TranscodingJob
+     */
+    public function setSubmittedAt($submittedAt)
+    {
+        $this->submittedAt = $submittedAt;
+
+        return $this;
+    }
+
+    /**
+     * Get submittedAt
+     *
+     * @return \DateTime 
+     */
+    public function getSubmittedAt()
+    {
+        return $this->submittedAt;
+    }
+
+    /**
+     * Set videoDuration
+     *
+     * @param integer $videoDuration
+     * @return TranscodingJob
+     */
+    public function setVideoDuration($videoDuration)
+    {
+        $this->videoDuration = $videoDuration;
+
+        return $this;
+    }
+
+    /**
+     * Get videoDuration
+     *
+     * @return integer 
+     */
+    public function getVideoDuration()
+    {
+        return $this->videoDuration;
+    }
+
+    /**
+     * Set errorLog
+     *
+     * @param string $errorLog
+     * @return TranscodingJob
+     */
+    public function setErrorLog($errorLog)
+    {
+        $this->errorLog = $errorLog;
+
+        return $this;
+    }
+
+    /**
+     * Get errorLog
+     *
+     * @return string 
+     */
+    public function getErrorLog()
+    {
+        return $this->errorLog;
+    }
+
+    /**
+     * Set idFactory
+     *
+     * @param \AppBundle\Entity\RTranscodingFactory $idFactory
+     * @return TranscodingJob
+     */
+    public function setIdFactory(\AppBundle\Entity\RTranscodingFactory $idFactory = null)
+    {
+        $this->idFactory = $idFactory;
+
+        return $this;
+    }
+
+    /**
+     * Get idFactory
+     *
+     * @return \AppBundle\Entity\RTranscodingFactory 
+     */
+    public function getIdFactory()
+    {
+        return $this->idFactory;
+    }
+
+    /**
+     * Set idJobstatus
+     *
+     * @param \AppBundle\Entity\RTranscodingStatus $idJobstatus
+     * @return TranscodingJob
+     */
+    public function setIdJobstatus(\AppBundle\Entity\RTranscodingStatus $idJobstatus = null)
+    {
+        $this->idJobstatus = $idJobstatus;
+
+        return $this;
+    }
+
+    /**
+     * Get idJobstatus
+     *
+     * @return \AppBundle\Entity\RTranscodingStatus 
+     */
+    public function getIdJobstatus()
+    {
+        return $this->idJobstatus;
+    }
+
+    /**
+     * Set publicationTask
+     *
+     * @param \AppBundle\Entity\PublicationTask $publicationTask
+     * @return TranscodingJob
+     */
+    public function setPublicationTask(\AppBundle\Entity\PublicationTask $publicationTask = null)
+    {
+        $this->publicationTask = $publicationTask;
+
+        return $this;
+    }
+
+    /**
+     * Get publicationTask
+     *
+     * @return \AppBundle\Entity\PublicationTask 
+     */
+    public function getPublicationTask()
+    {
+        return $this->publicationTask;
+    }
 }

@@ -92,4 +92,244 @@ class RLngLanguage
     private $position;
 
 
+
+    /**
+     * Get lngMixnewsIid
+     *
+     * @return integer 
+     */
+    public function getLngMixnewsIid()
+    {
+        return $this->lngMixnewsIid;
+    }
+
+    /**
+     * Set lngIid
+     *
+     * @param integer $lngIid
+     * @return RLngLanguage
+     */
+    public function setLngIid($lngIid)
+    {
+        $this->lngIid = $lngIid;
+
+        return $this;
+    }
+
+    /**
+     * Get lngIid
+     *
+     * @return integer 
+     */
+    public function getLngIid()
+    {
+        return $this->lngIid;
+    }
+
+    /**
+     * Set lngSalias
+     *
+     * @param string $lngSalias
+     * @return RLngLanguage
+     */
+    public function setLngSalias($lngSalias)
+    {
+        $this->lngSalias = $lngSalias;
+
+        return $this;
+    }
+
+    /**
+     * Get lngSalias
+     *
+     * @return string 
+     */
+    public function getLngSalias()
+    {
+        return $this->lngSalias;
+    }
+
+    /**
+     * Set lngHarris
+     *
+     * @param string $lngHarris
+     * @return RLngLanguage
+     */
+    public function setLngHarris($lngHarris)
+    {
+        $this->lngHarris = $lngHarris;
+
+        return $this;
+    }
+
+    /**
+     * Get lngHarris
+     *
+     * @return string 
+     */
+    public function getLngHarris()
+    {
+        return $this->lngHarris;
+    }
+
+    /**
+     * Set lngFullname
+     *
+     * @param string $lngFullname
+     * @return RLngLanguage
+     */
+    public function setLngFullname($lngFullname)
+    {
+        $this->lngFullname = $lngFullname;
+
+        return $this;
+    }
+
+    /**
+     * Get lngFullname
+     *
+     * @return string 
+     */
+    public function getLngFullname()
+    {
+        return $this->lngFullname;
+    }
+
+    /**
+     * Set lngRtl
+     *
+     * @param boolean $lngRtl
+     * @return RLngLanguage
+     */
+    public function setLngRtl($lngRtl)
+    {
+        $this->lngRtl = $lngRtl;
+
+        return $this;
+    }
+
+    /**
+     * Get lngRtl
+     *
+     * @return boolean 
+     */
+    public function getLngRtl()
+    {
+        return $this->lngRtl;
+    }
+
+    /**
+     * Set live
+     *
+     * @param boolean $live
+     * @return RLngLanguage
+     */
+    public function setLive($live)
+    {
+        $this->live = $live;
+
+        return $this;
+    }
+
+    /**
+     * Get live
+     *
+     * @return boolean 
+     */
+    public function getLive()
+    {
+        return $this->live;
+    }
+
+    /**
+     * Set lngSubdomain
+     *
+     * @param string $lngSubdomain
+     * @return RLngLanguage
+     */
+    public function setLngSubdomain($lngSubdomain)
+    {
+        $this->lngSubdomain = $lngSubdomain;
+
+        return $this;
+    }
+
+    /**
+     * Get lngSubdomain
+     *
+     * @return string 
+     */
+    public function getLngSubdomain()
+    {
+        return $this->lngSubdomain;
+    }
+
+    /**
+     * Set lngCollateLocale
+     *
+     * @param string $lngCollateLocale
+     * @return RLngLanguage
+     */
+    public function setLngCollateLocale($lngCollateLocale)
+    {
+        $this->lngCollateLocale = $lngCollateLocale;
+
+        return $this;
+    }
+
+    /**
+     * Get lngCollateLocale
+     *
+     * @return string 
+     */
+    public function getLngCollateLocale()
+    {
+        return $this->lngCollateLocale;
+    }
+
+    /**
+     * Set lngDrupalCode
+     *
+     * @param string $lngDrupalCode
+     * @return RLngLanguage
+     */
+    public function setLngDrupalCode($lngDrupalCode)
+    {
+        $this->lngDrupalCode = $lngDrupalCode;
+
+        return $this;
+    }
+
+    /**
+     * Get lngDrupalCode
+     *
+     * @return string 
+     */
+    public function getLngDrupalCode()
+    {
+        return $this->lngDrupalCode;
+    }
+
+    /**
+     * Set position
+     *
+     * @param boolean $position
+     * @return RLngLanguage
+     */
+    public function setPosition($position)
+    {
+        $this->position = $position;
+
+        return $this;
+    }
+
+    /**
+     * Get position
+     *
+     * @return boolean 
+     */
+    public function getPosition()
+    {
+        return $this->position;
+    }
 }

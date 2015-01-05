@@ -50,4 +50,106 @@ class RPublishingServer
     private $apiLocation;
 
 
+
+    /**
+     * Get idServer
+     *
+     * @return integer 
+     */
+    public function getIdServer()
+    {
+        return $this->idServer;
+    }
+
+    /**
+     * Set cname
+     *
+     * @param string $cname
+     * @return RPublishingServer
+     */
+    public function setCname($cname)
+    {
+        $this->cname = $cname;
+
+        return $this;
+    }
+
+    /**
+     * Get cname
+     *
+     * @return string 
+     */
+    public function getCname()
+    {
+        return $this->cname;
+    }
+
+    /**
+     * Set isMaster
+     *
+     * @param boolean $isMaster
+     * @return RPublishingServer
+     */
+    public function setIsMaster($isMaster)
+    {
+        $this->isMaster = $isMaster;
+
+        return $this;
+    }
+
+    /**
+     * Get isMaster
+     *
+     * @return boolean 
+     */
+    public function getIsMaster()
+    {
+        return $this->isMaster;
+    }
+
+    /**
+     * Set isSupermonitor
+     *
+     * @param boolean $isSupermonitor
+     * @return RPublishingServer
+     */
+    public function setIsSupermonitor($isSupermonitor)
+    {
+        $this->isSupermonitor = $isSupermonitor;
+
+        return $this;
+    }
+
+    /**
+     * Get isSupermonitor
+     *
+     * @return boolean 
+     */
+    public function getIsSupermonitor()
+    {
+        return $this->isSupermonitor;
+    }
+
+    /**
+     * Set apiLocation
+     *
+     * @param string $apiLocation
+     * @return RPublishingServer
+     */
+    public function setApiLocation($apiLocation)
+    {
+        $this->apiLocation = $apiLocation;
+
+        return $this;
+    }
+
+    /**
+     * Get apiLocation
+     *
+     * @return string 
+     */
+    public function getApiLocation()
+    {
+        return $this->apiLocation;
+    }
 }

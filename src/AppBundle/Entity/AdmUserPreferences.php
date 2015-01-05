@@ -50,4 +50,106 @@ class AdmUserPreferences
     private $workTelephone;
 
 
+
+    /**
+     * Get idUser
+     *
+     * @return integer 
+     */
+    public function getIdUser()
+    {
+        return $this->idUser;
+    }
+
+    /**
+     * Set webmailLogin
+     *
+     * @param string $webmailLogin
+     * @return AdmUserPreferences
+     */
+    public function setWebmailLogin($webmailLogin)
+    {
+        $this->webmailLogin = $webmailLogin;
+
+        return $this;
+    }
+
+    /**
+     * Get webmailLogin
+     *
+     * @return string 
+     */
+    public function getWebmailLogin()
+    {
+        return $this->webmailLogin;
+    }
+
+    /**
+     * Set webmailPassword
+     *
+     * @param string $webmailPassword
+     * @return AdmUserPreferences
+     */
+    public function setWebmailPassword($webmailPassword)
+    {
+        $this->webmailPassword = $webmailPassword;
+
+        return $this;
+    }
+
+    /**
+     * Get webmailPassword
+     *
+     * @return string 
+     */
+    public function getWebmailPassword()
+    {
+        return $this->webmailPassword;
+    }
+
+    /**
+     * Set language
+     *
+     * @param string $language
+     * @return AdmUserPreferences
+     */
+    public function setLanguage($language)
+    {
+        $this->language = $language;
+
+        return $this;
+    }
+
+    /**
+     * Get language
+     *
+     * @return string 
+     */
+    public function getLanguage()
+    {
+        return $this->language;
+    }
+
+    /**
+     * Set workTelephone
+     *
+     * @param string $workTelephone
+     * @return AdmUserPreferences
+     */
+    public function setWorkTelephone($workTelephone)
+    {
+        $this->workTelephone = $workTelephone;
+
+        return $this;
+    }
+
+    /**
+     * Get workTelephone
+     *
+     * @return string 
+     */
+    public function getWorkTelephone()
+    {
+        return $this->workTelephone;
+    }
 }

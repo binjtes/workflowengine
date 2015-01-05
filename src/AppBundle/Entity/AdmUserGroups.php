@@ -31,4 +31,50 @@ class AdmUserGroups
     private $idGroup;
 
 
+
+    /**
+     * Set idUser
+     *
+     * @param integer $idUser
+     * @return AdmUserGroups
+     */
+    public function setIdUser($idUser)
+    {
+        $this->idUser = $idUser;
+
+        return $this;
+    }
+
+    /**
+     * Get idUser
+     *
+     * @return integer 
+     */
+    public function getIdUser()
+    {
+        return $this->idUser;
+    }
+
+    /**
+     * Set idGroup
+     *
+     * @param integer $idGroup
+     * @return AdmUserGroups
+     */
+    public function setIdGroup($idGroup)
+    {
+        $this->idGroup = $idGroup;
+
+        return $this;
+    }
+
+    /**
+     * Get idGroup
+     *
+     * @return integer 
+     */
+    public function getIdGroup()
+    {
+        return $this->idGroup;
+    }
 }

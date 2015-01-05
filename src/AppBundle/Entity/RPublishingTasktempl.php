@@ -56,4 +56,106 @@ class RPublishingTasktempl
     private $publishingTaskType;
 
 
+
+    /**
+     * Get tasktemplId
+     *
+     * @return integer 
+     */
+    public function getTasktemplId()
+    {
+        return $this->tasktemplId;
+    }
+
+    /**
+     * Set serviceUrl
+     *
+     * @param string $serviceUrl
+     * @return RPublishingTasktempl
+     */
+    public function setServiceUrl($serviceUrl)
+    {
+        $this->serviceUrl = $serviceUrl;
+
+        return $this;
+    }
+
+    /**
+     * Get serviceUrl
+     *
+     * @return string 
+     */
+    public function getServiceUrl()
+    {
+        return $this->serviceUrl;
+    }
+
+    /**
+     * Set position
+     *
+     * @param integer $position
+     * @return RPublishingTasktempl
+     */
+    public function setPosition($position)
+    {
+        $this->position = $position;
+
+        return $this;
+    }
+
+    /**
+     * Get position
+     *
+     * @return integer 
+     */
+    public function getPosition()
+    {
+        return $this->position;
+    }
+
+    /**
+     * Set workflow
+     *
+     * @param \AppBundle\Entity\RPublishingWorkflow $workflow
+     * @return RPublishingTasktempl
+     */
+    public function setWorkflow(\AppBundle\Entity\RPublishingWorkflow $workflow = null)
+    {
+        $this->workflow = $workflow;
+
+        return $this;
+    }
+
+    /**
+     * Get workflow
+     *
+     * @return \AppBundle\Entity\RPublishingWorkflow 
+     */
+    public function getWorkflow()
+    {
+        return $this->workflow;
+    }
+
+    /**
+     * Set publishingTaskType
+     *
+     * @param \AppBundle\Entity\RPublishingTaskType $publishingTaskType
+     * @return RPublishingTasktempl
+     */
+    public function setPublishingTaskType(\AppBundle\Entity\RPublishingTaskType $publishingTaskType = null)
+    {
+        $this->publishingTaskType = $publishingTaskType;
+
+        return $this;
+    }
+
+    /**
+     * Get publishingTaskType
+     *
+     * @return \AppBundle\Entity\RPublishingTaskType 
+     */
+    public function getPublishingTaskType()
+    {
+        return $this->publishingTaskType;
+    }
 }

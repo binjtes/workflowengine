@@ -51,4 +51,96 @@ class TranscodingFiles
     private $idFilestatus;
 
 
+
+    /**
+     * Set fileOrder
+     *
+     * @param integer $fileOrder
+     * @return TranscodingFiles
+     */
+    public function setFileOrder($fileOrder)
+    {
+        $this->fileOrder = $fileOrder;
+
+        return $this;
+    }
+
+    /**
+     * Get fileOrder
+     *
+     * @return integer 
+     */
+    public function getFileOrder()
+    {
+        return $this->fileOrder;
+    }
+
+    /**
+     * Set fileUri
+     *
+     * @param string $fileUri
+     * @return TranscodingFiles
+     */
+    public function setFileUri($fileUri)
+    {
+        $this->fileUri = $fileUri;
+
+        return $this;
+    }
+
+    /**
+     * Get fileUri
+     *
+     * @return string 
+     */
+    public function getFileUri()
+    {
+        return $this->fileUri;
+    }
+
+    /**
+     * Set idJob
+     *
+     * @param \AppBundle\Entity\TranscodingJob $idJob
+     * @return TranscodingFiles
+     */
+    public function setIdJob(\AppBundle\Entity\TranscodingJob $idJob)
+    {
+        $this->idJob = $idJob;
+
+        return $this;
+    }
+
+    /**
+     * Get idJob
+     *
+     * @return \AppBundle\Entity\TranscodingJob 
+     */
+    public function getIdJob()
+    {
+        return $this->idJob;
+    }
+
+    /**
+     * Set idFilestatus
+     *
+     * @param \AppBundle\Entity\RTranscodingFileStatus $idFilestatus
+     * @return TranscodingFiles
+     */
+    public function setIdFilestatus(\AppBundle\Entity\RTranscodingFileStatus $idFilestatus = null)
+    {
+        $this->idFilestatus = $idFilestatus;
+
+        return $this;
+    }
+
+    /**
+     * Get idFilestatus
+     *
+     * @return \AppBundle\Entity\RTranscodingFileStatus 
+     */
+    public function getIdFilestatus()
+    {
+        return $this->idFilestatus;
+    }
 }

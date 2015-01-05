@@ -43,4 +43,83 @@ class RTranscodingLogin
     private $idMachineDefault;
 
 
+
+    /**
+     * Get idLogin
+     *
+     * @return integer 
+     */
+    public function getIdLogin()
+    {
+        return $this->idLogin;
+    }
+
+    /**
+     * Set login
+     *
+     * @param string $login
+     * @return RTranscodingLogin
+     */
+    public function setLogin($login)
+    {
+        $this->login = $login;
+
+        return $this;
+    }
+
+    /**
+     * Get login
+     *
+     * @return string 
+     */
+    public function getLogin()
+    {
+        return $this->login;
+    }
+
+    /**
+     * Set canSubmit
+     *
+     * @param boolean $canSubmit
+     * @return RTranscodingLogin
+     */
+    public function setCanSubmit($canSubmit)
+    {
+        $this->canSubmit = $canSubmit;
+
+        return $this;
+    }
+
+    /**
+     * Get canSubmit
+     *
+     * @return boolean 
+     */
+    public function getCanSubmit()
+    {
+        return $this->canSubmit;
+    }
+
+    /**
+     * Set idMachineDefault
+     *
+     * @param integer $idMachineDefault
+     * @return RTranscodingLogin
+     */
+    public function setIdMachineDefault($idMachineDefault)
+    {
+        $this->idMachineDefault = $idMachineDefault;
+
+        return $this;
+    }
+
+    /**
+     * Get idMachineDefault
+     *
+     * @return integer 
+     */
+    public function getIdMachineDefault()
+    {
+        return $this->idMachineDefault;
+    }
 }

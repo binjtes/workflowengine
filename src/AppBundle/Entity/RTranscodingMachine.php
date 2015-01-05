@@ -57,4 +57,129 @@ class RTranscodingMachine
     private $machineStub;
 
 
+
+    /**
+     * Get idMachine
+     *
+     * @return integer 
+     */
+    public function getIdMachine()
+    {
+        return $this->idMachine;
+    }
+
+    /**
+     * Set machineIp
+     *
+     * @param string $machineIp
+     * @return RTranscodingMachine
+     */
+    public function setMachineIp($machineIp)
+    {
+        $this->machineIp = $machineIp;
+
+        return $this;
+    }
+
+    /**
+     * Get machineIp
+     *
+     * @return string 
+     */
+    public function getMachineIp()
+    {
+        return $this->machineIp;
+    }
+
+    /**
+     * Set machineName
+     *
+     * @param string $machineName
+     * @return RTranscodingMachine
+     */
+    public function setMachineName($machineName)
+    {
+        $this->machineName = $machineName;
+
+        return $this;
+    }
+
+    /**
+     * Get machineName
+     *
+     * @return string 
+     */
+    public function getMachineName()
+    {
+        return $this->machineName;
+    }
+
+    /**
+     * Set mountFlipstories
+     *
+     * @param string $mountFlipstories
+     * @return RTranscodingMachine
+     */
+    public function setMountFlipstories($mountFlipstories)
+    {
+        $this->mountFlipstories = $mountFlipstories;
+
+        return $this;
+    }
+
+    /**
+     * Get mountFlipstories
+     *
+     * @return string 
+     */
+    public function getMountFlipstories()
+    {
+        return $this->mountFlipstories;
+    }
+
+    /**
+     * Set maxjob
+     *
+     * @param integer $maxjob
+     * @return RTranscodingMachine
+     */
+    public function setMaxjob($maxjob)
+    {
+        $this->maxjob = $maxjob;
+
+        return $this;
+    }
+
+    /**
+     * Get maxjob
+     *
+     * @return integer 
+     */
+    public function getMaxjob()
+    {
+        return $this->maxjob;
+    }
+
+    /**
+     * Set machineStub
+     *
+     * @param string $machineStub
+     * @return RTranscodingMachine
+     */
+    public function setMachineStub($machineStub)
+    {
+        $this->machineStub = $machineStub;
+
+        return $this;
+    }
+
+    /**
+     * Get machineStub
+     *
+     * @return string 
+     */
+    public function getMachineStub()
+    {
+        return $this->machineStub;
+    }
 }

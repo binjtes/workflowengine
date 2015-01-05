@@ -46,4 +46,83 @@ class RPublishingHn
     private $workflow;
 
 
+
+    /**
+     * Get rPublishingHnId
+     *
+     * @return integer 
+     */
+    public function getRPublishingHnId()
+    {
+        return $this->rPublishingHnId;
+    }
+
+    /**
+     * Set hnType
+     *
+     * @param string $hnType
+     * @return RPublishingHn
+     */
+    public function setHnType($hnType)
+    {
+        $this->hnType = $hnType;
+
+        return $this;
+    }
+
+    /**
+     * Get hnType
+     *
+     * @return string 
+     */
+    public function getHnType()
+    {
+        return $this->hnType;
+    }
+
+    /**
+     * Set label
+     *
+     * @param string $label
+     * @return RPublishingHn
+     */
+    public function setLabel($label)
+    {
+        $this->label = $label;
+
+        return $this;
+    }
+
+    /**
+     * Get label
+     *
+     * @return string 
+     */
+    public function getLabel()
+    {
+        return $this->label;
+    }
+
+    /**
+     * Set workflow
+     *
+     * @param \AppBundle\Entity\RPublishingWorkflow $workflow
+     * @return RPublishingHn
+     */
+    public function setWorkflow(\AppBundle\Entity\RPublishingWorkflow $workflow = null)
+    {
+        $this->workflow = $workflow;
+
+        return $this;
+    }
+
+    /**
+     * Get workflow
+     *
+     * @return \AppBundle\Entity\RPublishingWorkflow 
+     */
+    public function getWorkflow()
+    {
+        return $this->workflow;
+    }
 }

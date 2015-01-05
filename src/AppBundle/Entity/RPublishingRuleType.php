@@ -36,4 +36,60 @@ class RPublishingRuleType
     private $serviceUrl;
 
 
+
+    /**
+     * Get ruleTypeId
+     *
+     * @return integer 
+     */
+    public function getRuleTypeId()
+    {
+        return $this->ruleTypeId;
+    }
+
+    /**
+     * Set ruleTypeDescription
+     *
+     * @param string $ruleTypeDescription
+     * @return RPublishingRuleType
+     */
+    public function setRuleTypeDescription($ruleTypeDescription)
+    {
+        $this->ruleTypeDescription = $ruleTypeDescription;
+
+        return $this;
+    }
+
+    /**
+     * Get ruleTypeDescription
+     *
+     * @return string 
+     */
+    public function getRuleTypeDescription()
+    {
+        return $this->ruleTypeDescription;
+    }
+
+    /**
+     * Set serviceUrl
+     *
+     * @param string $serviceUrl
+     * @return RPublishingRuleType
+     */
+    public function setServiceUrl($serviceUrl)
+    {
+        $this->serviceUrl = $serviceUrl;
+
+        return $this;
+    }
+
+    /**
+     * Get serviceUrl
+     *
+     * @return string 
+     */
+    public function getServiceUrl()
+    {
+        return $this->serviceUrl;
+    }
 }

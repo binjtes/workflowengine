@@ -29,4 +29,37 @@ class RTranscodingStatus
     private $labelStatus;
 
 
+
+    /**
+     * Get idJobstatus
+     *
+     * @return integer 
+     */
+    public function getIdJobstatus()
+    {
+        return $this->idJobstatus;
+    }
+
+    /**
+     * Set labelStatus
+     *
+     * @param string $labelStatus
+     * @return RTranscodingStatus
+     */
+    public function setLabelStatus($labelStatus)
+    {
+        $this->labelStatus = $labelStatus;
+
+        return $this;
+    }
+
+    /**
+     * Get labelStatus
+     *
+     * @return string 
+     */
+    public function getLabelStatus()
+    {
+        return $this->labelStatus;
+    }
 }

@@ -155,4 +155,451 @@ class AdmUsers
     private $emailPass;
 
 
+
+    /**
+     * Get iduser
+     *
+     * @return integer 
+     */
+    public function getIduser()
+    {
+        return $this->iduser;
+    }
+
+    /**
+     * Set login
+     *
+     * @param string $login
+     * @return AdmUsers
+     */
+    public function setLogin($login)
+    {
+        $this->login = $login;
+
+        return $this;
+    }
+
+    /**
+     * Get login
+     *
+     * @return string 
+     */
+    public function getLogin()
+    {
+        return $this->login;
+    }
+
+    /**
+     * Set passwordHash
+     *
+     * @param string $passwordHash
+     * @return AdmUsers
+     */
+    public function setPasswordHash($passwordHash)
+    {
+        $this->passwordHash = $passwordHash;
+
+        return $this;
+    }
+
+    /**
+     * Get passwordHash
+     *
+     * @return string 
+     */
+    public function getPasswordHash()
+    {
+        return $this->passwordHash;
+    }
+
+    /**
+     * Set nonce
+     *
+     * @param string $nonce
+     * @return AdmUsers
+     */
+    public function setNonce($nonce)
+    {
+        $this->nonce = $nonce;
+
+        return $this;
+    }
+
+    /**
+     * Get nonce
+     *
+     * @return string 
+     */
+    public function getNonce()
+    {
+        return $this->nonce;
+    }
+
+    /**
+     * Set email
+     *
+     * @param string $email
+     * @return AdmUsers
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+
+        return $this;
+    }
+
+    /**
+     * Get email
+     *
+     * @return string 
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * Set nom
+     *
+     * @param string $nom
+     * @return AdmUsers
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+
+        return $this;
+    }
+
+    /**
+     * Get nom
+     *
+     * @return string 
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
+
+    /**
+     * Set prenom
+     *
+     * @param string $prenom
+     * @return AdmUsers
+     */
+    public function setPrenom($prenom)
+    {
+        $this->prenom = $prenom;
+
+        return $this;
+    }
+
+    /**
+     * Get prenom
+     *
+     * @return string 
+     */
+    public function getPrenom()
+    {
+        return $this->prenom;
+    }
+
+    /**
+     * Set avatar
+     *
+     * @param string $avatar
+     * @return AdmUsers
+     */
+    public function setAvatar($avatar)
+    {
+        $this->avatar = $avatar;
+
+        return $this;
+    }
+
+    /**
+     * Get avatar
+     *
+     * @return string 
+     */
+    public function getAvatar()
+    {
+        return $this->avatar;
+    }
+
+    /**
+     * Set actif
+     *
+     * @param boolean $actif
+     * @return AdmUsers
+     */
+    public function setActif($actif)
+    {
+        $this->actif = $actif;
+
+        return $this;
+    }
+
+    /**
+     * Get actif
+     *
+     * @return boolean 
+     */
+    public function getActif()
+    {
+        return $this->actif;
+    }
+
+    /**
+     * Set commentaire
+     *
+     * @param string $commentaire
+     * @return AdmUsers
+     */
+    public function setCommentaire($commentaire)
+    {
+        $this->commentaire = $commentaire;
+
+        return $this;
+    }
+
+    /**
+     * Get commentaire
+     *
+     * @return string 
+     */
+    public function getCommentaire()
+    {
+        return $this->commentaire;
+    }
+
+    /**
+     * Set quotaForum
+     *
+     * @param integer $quotaForum
+     * @return AdmUsers
+     */
+    public function setQuotaForum($quotaForum)
+    {
+        $this->quotaForum = $quotaForum;
+
+        return $this;
+    }
+
+    /**
+     * Get quotaForum
+     *
+     * @return integer 
+     */
+    public function getQuotaForum()
+    {
+        return $this->quotaForum;
+    }
+
+    /**
+     * Set cptLock
+     *
+     * @param integer $cptLock
+     * @return AdmUsers
+     */
+    public function setCptLock($cptLock)
+    {
+        $this->cptLock = $cptLock;
+
+        return $this;
+    }
+
+    /**
+     * Get cptLock
+     *
+     * @return integer 
+     */
+    public function getCptLock()
+    {
+        return $this->cptLock;
+    }
+
+    /**
+     * Set dtCrea
+     *
+     * @param \DateTime $dtCrea
+     * @return AdmUsers
+     */
+    public function setDtCrea($dtCrea)
+    {
+        $this->dtCrea = $dtCrea;
+
+        return $this;
+    }
+
+    /**
+     * Get dtCrea
+     *
+     * @return \DateTime 
+     */
+    public function getDtCrea()
+    {
+        return $this->dtCrea;
+    }
+
+    /**
+     * Set idCrea
+     *
+     * @param integer $idCrea
+     * @return AdmUsers
+     */
+    public function setIdCrea($idCrea)
+    {
+        $this->idCrea = $idCrea;
+
+        return $this;
+    }
+
+    /**
+     * Get idCrea
+     *
+     * @return integer 
+     */
+    public function getIdCrea()
+    {
+        return $this->idCrea;
+    }
+
+    /**
+     * Set dtModif
+     *
+     * @param \DateTime $dtModif
+     * @return AdmUsers
+     */
+    public function setDtModif($dtModif)
+    {
+        $this->dtModif = $dtModif;
+
+        return $this;
+    }
+
+    /**
+     * Get dtModif
+     *
+     * @return \DateTime 
+     */
+    public function getDtModif()
+    {
+        return $this->dtModif;
+    }
+
+    /**
+     * Set idModif
+     *
+     * @param integer $idModif
+     * @return AdmUsers
+     */
+    public function setIdModif($idModif)
+    {
+        $this->idModif = $idModif;
+
+        return $this;
+    }
+
+    /**
+     * Get idModif
+     *
+     * @return integer 
+     */
+    public function getIdModif()
+    {
+        return $this->idModif;
+    }
+
+    /**
+     * Set dtLastlog
+     *
+     * @param \DateTime $dtLastlog
+     * @return AdmUsers
+     */
+    public function setDtLastlog($dtLastlog)
+    {
+        $this->dtLastlog = $dtLastlog;
+
+        return $this;
+    }
+
+    /**
+     * Get dtLastlog
+     *
+     * @return \DateTime 
+     */
+    public function getDtLastlog()
+    {
+        return $this->dtLastlog;
+    }
+
+    /**
+     * Set idRole
+     *
+     * @param boolean $idRole
+     * @return AdmUsers
+     */
+    public function setIdRole($idRole)
+    {
+        $this->idRole = $idRole;
+
+        return $this;
+    }
+
+    /**
+     * Get idRole
+     *
+     * @return boolean 
+     */
+    public function getIdRole()
+    {
+        return $this->idRole;
+    }
+
+    /**
+     * Set matricule
+     *
+     * @param integer $matricule
+     * @return AdmUsers
+     */
+    public function setMatricule($matricule)
+    {
+        $this->matricule = $matricule;
+
+        return $this;
+    }
+
+    /**
+     * Get matricule
+     *
+     * @return integer 
+     */
+    public function getMatricule()
+    {
+        return $this->matricule;
+    }
+
+    /**
+     * Set emailPass
+     *
+     * @param string $emailPass
+     * @return AdmUsers
+     */
+    public function setEmailPass($emailPass)
+    {
+        $this->emailPass = $emailPass;
+
+        return $this;
+    }
+
+    /**
+     * Get emailPass
+     *
+     * @return string 
+     */
+    public function getEmailPass()
+    {
+        return $this->emailPass;
+    }
 }

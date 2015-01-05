@@ -111,4 +111,267 @@ class PublicationWorkflow
     private $createdBy;
 
 
+
+    /**
+     * Get publicationId
+     *
+     * @return integer 
+     */
+    public function getPublicationId()
+    {
+        return $this->publicationId;
+    }
+
+    /**
+     * Set housenumber
+     *
+     * @param string $housenumber
+     * @return PublicationWorkflow
+     */
+    public function setHousenumber($housenumber)
+    {
+        $this->housenumber = $housenumber;
+
+        return $this;
+    }
+
+    /**
+     * Get housenumber
+     *
+     * @return string 
+     */
+    public function getHousenumber()
+    {
+        return $this->housenumber;
+    }
+
+    /**
+     * Set dateCreation
+     *
+     * @param \DateTime $dateCreation
+     * @return PublicationWorkflow
+     */
+    public function setDateCreation($dateCreation)
+    {
+        $this->dateCreation = $dateCreation;
+
+        return $this;
+    }
+
+    /**
+     * Get dateCreation
+     *
+     * @return \DateTime 
+     */
+    public function getDateCreation()
+    {
+        return $this->dateCreation;
+    }
+
+    /**
+     * Set lastModified
+     *
+     * @param \DateTime $lastModified
+     * @return PublicationWorkflow
+     */
+    public function setLastModified($lastModified)
+    {
+        $this->lastModified = $lastModified;
+
+        return $this;
+    }
+
+    /**
+     * Get lastModified
+     *
+     * @return \DateTime 
+     */
+    public function getLastModified()
+    {
+        return $this->lastModified;
+    }
+
+    /**
+     * Set farmId
+     *
+     * @param integer $farmId
+     * @return PublicationWorkflow
+     */
+    public function setFarmId($farmId)
+    {
+        $this->farmId = $farmId;
+
+        return $this;
+    }
+
+    /**
+     * Get farmId
+     *
+     * @return integer 
+     */
+    public function getFarmId()
+    {
+        return $this->farmId;
+    }
+
+    /**
+     * Set xmlOrigin
+     *
+     * @param string $xmlOrigin
+     * @return PublicationWorkflow
+     */
+    public function setXmlOrigin($xmlOrigin)
+    {
+        $this->xmlOrigin = $xmlOrigin;
+
+        return $this;
+    }
+
+    /**
+     * Get xmlOrigin
+     *
+     * @return string 
+     */
+    public function getXmlOrigin()
+    {
+        return $this->xmlOrigin;
+    }
+
+    /**
+     * Set message
+     *
+     * @param string $message
+     * @return PublicationWorkflow
+     */
+    public function setMessage($message)
+    {
+        $this->message = $message;
+
+        return $this;
+    }
+
+    /**
+     * Get message
+     *
+     * @return string 
+     */
+    public function getMessage()
+    {
+        return $this->message;
+    }
+
+    /**
+     * Set lastRun
+     *
+     * @param \DateTime $lastRun
+     * @return PublicationWorkflow
+     */
+    public function setLastRun($lastRun)
+    {
+        $this->lastRun = $lastRun;
+
+        return $this;
+    }
+
+    /**
+     * Get lastRun
+     *
+     * @return \DateTime 
+     */
+    public function getLastRun()
+    {
+        return $this->lastRun;
+    }
+
+    /**
+     * Set workflow
+     *
+     * @param \AppBundle\Entity\RPublishingWorkflow $workflow
+     * @return PublicationWorkflow
+     */
+    public function setWorkflow(\AppBundle\Entity\RPublishingWorkflow $workflow = null)
+    {
+        $this->workflow = $workflow;
+
+        return $this;
+    }
+
+    /**
+     * Get workflow
+     *
+     * @return \AppBundle\Entity\RPublishingWorkflow 
+     */
+    public function getWorkflow()
+    {
+        return $this->workflow;
+    }
+
+    /**
+     * Set idStatus
+     *
+     * @param \AppBundle\Entity\PublicationStatus $idStatus
+     * @return PublicationWorkflow
+     */
+    public function setIdStatus(\AppBundle\Entity\PublicationStatus $idStatus = null)
+    {
+        $this->idStatus = $idStatus;
+
+        return $this;
+    }
+
+    /**
+     * Get idStatus
+     *
+     * @return \AppBundle\Entity\PublicationStatus 
+     */
+    public function getIdStatus()
+    {
+        return $this->idStatus;
+    }
+
+    /**
+     * Set lngMixnewsIid
+     *
+     * @param \AppBundle\Entity\RLngLanguage $lngMixnewsIid
+     * @return PublicationWorkflow
+     */
+    public function setLngMixnewsIid(\AppBundle\Entity\RLngLanguage $lngMixnewsIid = null)
+    {
+        $this->lngMixnewsIid = $lngMixnewsIid;
+
+        return $this;
+    }
+
+    /**
+     * Get lngMixnewsIid
+     *
+     * @return \AppBundle\Entity\RLngLanguage 
+     */
+    public function getLngMixnewsIid()
+    {
+        return $this->lngMixnewsIid;
+    }
+
+    /**
+     * Set createdBy
+     *
+     * @param \AppBundle\Entity\AdmUsers $createdBy
+     * @return PublicationWorkflow
+     */
+    public function setCreatedBy(\AppBundle\Entity\AdmUsers $createdBy = null)
+    {
+        $this->createdBy = $createdBy;
+
+        return $this;
+    }
+
+    /**
+     * Get createdBy
+     *
+     * @return \AppBundle\Entity\AdmUsers 
+     */
+    public function getCreatedBy()
+    {
+        return $this->createdBy;
+    }
 }

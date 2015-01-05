@@ -42,4 +42,60 @@ class RPublishingLanguage
     private $lngMixnewsIid;
 
 
+
+    /**
+     * Get rPublishingLanguageId
+     *
+     * @return integer 
+     */
+    public function getRPublishingLanguageId()
+    {
+        return $this->rPublishingLanguageId;
+    }
+
+    /**
+     * Set workflow
+     *
+     * @param \AppBundle\Entity\RPublishingWorkflow $workflow
+     * @return RPublishingLanguage
+     */
+    public function setWorkflow(\AppBundle\Entity\RPublishingWorkflow $workflow = null)
+    {
+        $this->workflow = $workflow;
+
+        return $this;
+    }
+
+    /**
+     * Get workflow
+     *
+     * @return \AppBundle\Entity\RPublishingWorkflow 
+     */
+    public function getWorkflow()
+    {
+        return $this->workflow;
+    }
+
+    /**
+     * Set lngMixnewsIid
+     *
+     * @param \AppBundle\Entity\RLngLanguage $lngMixnewsIid
+     * @return RPublishingLanguage
+     */
+    public function setLngMixnewsIid(\AppBundle\Entity\RLngLanguage $lngMixnewsIid = null)
+    {
+        $this->lngMixnewsIid = $lngMixnewsIid;
+
+        return $this;
+    }
+
+    /**
+     * Get lngMixnewsIid
+     *
+     * @return \AppBundle\Entity\RLngLanguage 
+     */
+    public function getLngMixnewsIid()
+    {
+        return $this->lngMixnewsIid;
+    }
 }

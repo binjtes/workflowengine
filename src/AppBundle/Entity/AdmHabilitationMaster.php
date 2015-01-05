@@ -82,4 +82,211 @@ class AdmHabilitationMaster
     private $compulsory;
 
 
+
+    /**
+     * Set module
+     *
+     * @param string $module
+     * @return AdmHabilitationMaster
+     */
+    public function setModule($module)
+    {
+        $this->module = $module;
+
+        return $this;
+    }
+
+    /**
+     * Get module
+     *
+     * @return string 
+     */
+    public function getModule()
+    {
+        return $this->module;
+    }
+
+    /**
+     * Set page
+     *
+     * @param string $page
+     * @return AdmHabilitationMaster
+     */
+    public function setPage($page)
+    {
+        $this->page = $page;
+
+        return $this;
+    }
+
+    /**
+     * Get page
+     *
+     * @return string 
+     */
+    public function getPage()
+    {
+        return $this->page;
+    }
+
+    /**
+     * Set idPlatform
+     *
+     * @param integer $idPlatform
+     * @return AdmHabilitationMaster
+     */
+    public function setIdPlatform($idPlatform)
+    {
+        $this->idPlatform = $idPlatform;
+
+        return $this;
+    }
+
+    /**
+     * Get idPlatform
+     *
+     * @return integer 
+     */
+    public function getIdPlatform()
+    {
+        return $this->idPlatform;
+    }
+
+    /**
+     * Set insert
+     *
+     * @param integer $insert
+     * @return AdmHabilitationMaster
+     */
+    public function setInsert($insert)
+    {
+        $this->insert = $insert;
+
+        return $this;
+    }
+
+    /**
+     * Get insert
+     *
+     * @return integer 
+     */
+    public function getInsert()
+    {
+        return $this->insert;
+    }
+
+    /**
+     * Set update
+     *
+     * @param integer $update
+     * @return AdmHabilitationMaster
+     */
+    public function setUpdate($update)
+    {
+        $this->update = $update;
+
+        return $this;
+    }
+
+    /**
+     * Get update
+     *
+     * @return integer 
+     */
+    public function getUpdate()
+    {
+        return $this->update;
+    }
+
+    /**
+     * Set delete
+     *
+     * @param integer $delete
+     * @return AdmHabilitationMaster
+     */
+    public function setDelete($delete)
+    {
+        $this->delete = $delete;
+
+        return $this;
+    }
+
+    /**
+     * Get delete
+     *
+     * @return integer 
+     */
+    public function getDelete()
+    {
+        return $this->delete;
+    }
+
+    /**
+     * Set access
+     *
+     * @param integer $access
+     * @return AdmHabilitationMaster
+     */
+    public function setAccess($access)
+    {
+        $this->access = $access;
+
+        return $this;
+    }
+
+    /**
+     * Get access
+     *
+     * @return integer 
+     */
+    public function getAccess()
+    {
+        return $this->access;
+    }
+
+    /**
+     * Set menuExempt
+     *
+     * @param integer $menuExempt
+     * @return AdmHabilitationMaster
+     */
+    public function setMenuExempt($menuExempt)
+    {
+        $this->menuExempt = $menuExempt;
+
+        return $this;
+    }
+
+    /**
+     * Get menuExempt
+     *
+     * @return integer 
+     */
+    public function getMenuExempt()
+    {
+        return $this->menuExempt;
+    }
+
+    /**
+     * Set compulsory
+     *
+     * @param integer $compulsory
+     * @return AdmHabilitationMaster
+     */
+    public function setCompulsory($compulsory)
+    {
+        $this->compulsory = $compulsory;
+
+        return $this;
+    }
+
+    /**
+     * Get compulsory
+     *
+     * @return integer 
+     */
+    public function getCompulsory()
+    {
+        return $this->compulsory;
+    }
 }
