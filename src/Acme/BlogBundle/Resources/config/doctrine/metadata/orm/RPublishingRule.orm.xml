@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="RPublishingRule" table="r_publishing_rule">
+    <indexes>
+      <index name="IDX_19EC64D52C7C2CBA" columns="workflow_id"/>
+      <index name="IDX_19EC64D535D8B527" columns="rule_type_id"/>
+    </indexes>
+    <id name="ruleOrder" type="integer" column="rule_order"/>
+    <id name="workflow" association-key="true"/>
+    <id name="ruleType" association-key="true"/>
+    <one-to-one field="ruleType" target-entity="RPublishingRuleType">
+      <join-columns>
+        <join-column name="rule_type_id" referenced-column-name="rule_type_id"/>
+      </join-columns>
+    </one-to-one>
+    <one-to-one field="workflow" target-entity="RPublishingWorkflow">
+      <join-columns>
+        <join-column name="workflow_id" referenced-column-name="workflow_id"/>
+      </join-columns>
+    </one-to-one>
+  </entity>
+</doctrine-mapping>

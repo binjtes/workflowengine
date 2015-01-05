@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AdmUserGroups" table="adm_user_groups">
+    <unique-constraints>
+      <unique-constraint name="id_user" columns="id_user,id_group"/>
+    </unique-constraints>
+    <id name="idUser" type="integer" column="id_user"/>
+    <id name="idGroup" type="integer" column="id_group"/>
+  </entity>
+</doctrine-mapping>

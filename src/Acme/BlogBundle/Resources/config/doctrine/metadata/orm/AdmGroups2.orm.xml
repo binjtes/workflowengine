@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AdmGroups2" table="adm_groups2">
+    <id name="idGrp" type="bigint" column="id_grp">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="libGrp" type="string" column="lib_grp" length="100" nullable="true"/>
+    <field name="dtCrea" type="datetime" column="dt_crea" nullable="true"/>
+    <field name="idCrea" type="integer" column="id_crea" nullable="true"/>
+    <field name="dtModif" type="datetime" column="dt_modif" nullable="true"/>
+    <field name="idModif" type="integer" column="id_modif" nullable="true"/>
+  </entity>
+</doctrine-mapping>

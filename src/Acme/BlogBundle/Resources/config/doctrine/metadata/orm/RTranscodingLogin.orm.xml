@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="RTranscodingLogin" table="r_transcoding_login">
+    <id name="idLogin" type="integer" column="id_login">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="login" type="string" column="login" length="45" nullable="false"/>
+    <field name="canSubmit" type="boolean" column="can_submit" nullable="false"/>
+    <field name="idMachineDefault" type="integer" column="id_machine_default" nullable="false"/>
+  </entity>
+</doctrine-mapping>

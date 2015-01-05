@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AdmTranslations" table="adm_translations">
+    <id name="idPhrase" type="integer" column="id_phrase">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="stub" type="string" column="stub" length="100" nullable="false"/>
+    <field name="en" type="text" column="en" length="65535" nullable="false"/>
+    <field name="fr" type="text" column="fr" length="65535" nullable="true"/>
+    <field name="de" type="text" column="de" length="65535" nullable="true"/>
+    <field name="it" type="text" column="it" length="65535" nullable="true"/>
+    <field name="sp" type="text" column="sp" length="65535" nullable="true"/>
+    <field name="pt" type="text" column="pt" length="65535" nullable="true"/>
+    <field name="ru" type="text" column="ru" length="65535" nullable="true"/>
+    <field name="ar" type="text" column="ar" length="65535" nullable="true"/>
+    <field name="tr" type="text" column="tr" length="65535" nullable="true"/>
+    <field name="pe" type="text" column="pe" length="65535" nullable="true"/>
+    <field name="pl" type="text" column="pl" length="65535" nullable="true"/>
+    <field name="ua" type="text" column="ua" length="65535" nullable="true"/>
+  </entity>
+</doctrine-mapping>

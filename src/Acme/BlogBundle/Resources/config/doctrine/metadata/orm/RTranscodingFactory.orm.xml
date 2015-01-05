@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="RTranscodingFactory" table="r_transcoding_factory">
+    <indexes>
+      <index name="fk_r_transcoding_factory_r_transcoding_machine1_idx" columns="id_machine"/>
+      <index name="fk_r_transcoding_factory_r_transcoding_login1_idx" columns="id_login"/>
+    </indexes>
+    <id name="idFactory" type="integer" column="id_factory">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="factoryStub" type="string" column="factory_stub" length="45" nullable="false"/>
+    <field name="factoryLabel" type="string" column="factory_label" length="45" nullable="false"/>
+    <field name="factoryName" type="string" column="factory_name" length="45" nullable="true"/>
+    <field name="factoryDescription" type="string" column="factory_description" length="255" nullable="true"/>
+    <field name="idLogin" type="integer" column="id_login" nullable="false"/>
+    <field name="idMachine" type="integer" column="id_machine" nullable="false"/>
+    <field name="renameMask" type="string" column="rename_mask" length="255" nullable="true"/>
+    <field name="optionRename" type="boolean" column="option_rename" nullable="false"/>
+    <field name="extension" type="string" column="extension" length="4" nullable="false"/>
+    <field name="defaultPriority" type="string" column="default_priority" length="45" nullable="false"/>
+    <field name="defaultSchedule" type="time" column="default_schedule" nullable="true"/>
+    <field name="pathToFile" type="string" column="path_to_file" length="255" nullable="true"/>
+  </entity>
+</doctrine-mapping>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AdmUsers" table="adm_users">
+    <indexes>
+      <index name="Index_login" columns="login"/>
+      <index name="Index_nom" columns="nom"/>
+      <index name="Index_prenom" columns="prenom"/>
+      <index name="Index_mail" columns="email"/>
+    </indexes>
+    <id name="iduser" type="integer" column="iduser">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="login" type="string" column="login" length="20" nullable="true"/>
+    <field name="passwordHash" type="string" column="password_hash" length="41" nullable="true"/>
+    <field name="nonce" type="string" column="nonce" length="32" nullable="false"/>
+    <field name="email" type="string" column="email" length="60" nullable="true"/>
+    <field name="nom" type="string" column="nom" length="40" nullable="true"/>
+    <field name="prenom" type="string" column="prenom" length="40" nullable="true"/>
+    <field name="avatar" type="string" column="avatar" length="120" nullable="true"/>
+    <field name="actif" type="boolean" column="actif" nullable="true"/>
+    <field name="commentaire" type="string" column="commentaire" length="255" nullable="true"/>
+    <field name="quotaForum" type="integer" column="quota_forum" nullable="true"/>
+    <field name="cptLock" type="integer" column="cpt_lock" nullable="true"/>
+    <field name="dtCrea" type="datetime" column="dt_crea" nullable="true"/>
+    <field name="idCrea" type="integer" column="id_crea" nullable="true"/>
+    <field name="dtModif" type="datetime" column="dt_modif" nullable="true"/>
+    <field name="idModif" type="integer" column="id_modif" nullable="true"/>
+    <field name="dtLastlog" type="datetime" column="dt_lastlog" nullable="true"/>
+    <field name="idRole" type="boolean" column="id_role" nullable="true"/>
+    <field name="matricule" type="integer" column="matricule" nullable="true"/>
+    <field name="emailPass" type="string" column="email_pass" length="50" nullable="true"/>
+  </entity>
+</doctrine-mapping>

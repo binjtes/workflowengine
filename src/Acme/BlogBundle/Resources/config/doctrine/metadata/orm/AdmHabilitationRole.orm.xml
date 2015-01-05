@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="AdmHabilitationRole" table="adm_habilitation_role">
+    <id name="idRole" type="integer" column="id_role"/>
+    <id name="module" type="string" column="module" length="30"/>
+    <id name="page" type="string" column="page" length="30"/>
+    <field name="insert" type="integer" column="insert" nullable="false"/>
+    <field name="update" type="integer" column="update" nullable="false"/>
+    <field name="delete" type="integer" column="delete" nullable="false"/>
+    <field name="access" type="integer" column="access" nullable="false"/>
+  </entity>
+</doctrine-mapping>
