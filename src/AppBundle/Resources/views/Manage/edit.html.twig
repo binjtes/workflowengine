@@ -25,37 +25,7 @@
 		       
 		        </div>
 		      
-  				<div class="row">
-      				<div class="col-xs-6 col-md-7">publishing workflows</div>
-		      	</div>
-		      	<table class="table table-hover">
-		      	<thead>
-		      	<th>Id</th>
-		      	<th>Family</th>
-				<th>Name</th>
-				<th>stub</th>
-				<th>runs on thread </th>
-				<th>is auto </th>
-				<th>is concat </th>
-		      	
-		      	</thead>
-		      	<tbody>
-		   
-				{% for rpublishingworkflow in rpublishingworkflows %}
-				<tr>
-					<td>{{ rpublishingworkflow.workflowId }} </td>
-					<td>{{ rpublishingworkflow.publishing.name }} </td>
-					<td>{{ rpublishingworkflow.name }} </td>
-					<td>{{ rpublishingworkflow.stub}} </td>
-					<td>{{ rpublishingworkflow.farmId}} </td>
-					<td>{{ rpublishingworkflow.auto}} </td>
-					<td>{{ rpublishingworkflow.isConcat}} </td>
-				</tr>
-				{% endfor %}
 
-				</tbody>
-				</table>
-				
     	</div><!-- /.container -->
     	{% include 'BraincraftedBootstrapBundle::flash.html.twig' %}
  		{% endblock %}

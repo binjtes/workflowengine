@@ -8,6 +8,7 @@
 	<script type="text/javascript" src="{{ asset('js/workflow_manage.js') }}"></script>
 {% endblock %}
 {% block container %}
+		{% include 'BraincraftedBootstrapBundle::flash.html.twig' %}
    		 <div class="container">
 
 		      <div class="workflow_engine-template">
@@ -37,6 +38,7 @@
 					{{ form_end(form) }}
 		       		</div>
 		      	</div> 
+		      	{% block listcontainers %}
 		      	<table class="table table-hover">
 		      	<thead>
 		      	<th>Id</th>
@@ -49,24 +51,25 @@
 		      	
 		      	</thead>
 		      	<tbody>
-		      
+		      	
 				{% for rpublishingworkflow in rpublishingworkflows %}
 				<tr >
 					<td>{{ rpublishingworkflow.workflowId }} </td>
-					<td ><a href="{{ path('manage_edit', {'wokflowid': rpublishingworkflow.workflowId}) }}">{{ rpublishingworkflow.publishing.name }}</a> </td>
-					<td>{{ rpublishingworkflow.name }} </td>
+					<td>{{ rpublishingworkflow.publishing.name }}</td>
+					<td><a href="{{ path('manage_edit', {'workflowid': rpublishingworkflow.workflowId}) }}">{{ rpublishingworkflow.name }}</a></td>
 					<td>{{ rpublishingworkflow.stub}} </td>
 					<td>{{ rpublishingworkflow.farmId}} </td>
 					<td>{{ rpublishingworkflow.auto}} </td>
 					<td>{{ rpublishingworkflow.isConcat}} </td>
 				</tr>
 				{% endfor %}
-				
+			
 				</tbody>
 				</table>
+					{% endblock %}
 				
     	</div><!-- /.container -->
-    	{% include 'BraincraftedBootstrapBundle::flash.html.twig' %}
+    
  		{% endblock %}
 
 

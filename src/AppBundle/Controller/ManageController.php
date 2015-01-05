@@ -56,23 +56,29 @@ class ManageController extends Controller
      */
     public function editAction($workflowid ){
     	
-    	$editworkflow = $this->getDoctrine()->getRepository('AppBundle:RPublishingWorkflow')->find($workflowid);
+    	$workflow = $this->getDoctrine()->getRepository('AppBundle:RPublishingWorkflow')->find($workflowid);
     	
-    	$form = $this->createForm(new RworkflowType(), $editworkflow   ,
-    			array(  'action' => $this->generateUrl('manage_update'),'method' => 'POST'));
+    	$form = $this->createForm(new RworkflowType(), $workflow);
 
+    	
+    	$form->handleRequest($this->getRequest());
+    	// once updated , redirection to index manage page (listing)
+    	if ($form->isValid()) {
+    		$em = $this->getDoctrine()->getManager();
+    		$workflow = $form->getData();
+    		$em->persist($workflow);
+    		$em->flush();
+    		
+
+    		$this->get('session')->getFlashBag()->add('notice', 'Le nouveau workflow a été créé');
+    		
+    		return $this->redirect( $this->generateUrl('manage'));
+    	}
+    	
     	$rpublishingworkflows = $this->getDoctrine()->getRepository('AppBundle:RPublishingWorkflow')->findAll();
     	return $this->render('AppBundle:Manage:edit.html.twig', array('form' => $form->createView(),'rpublishingworkflows'=>$rpublishingworkflows));
     }
-    /**
-     * @Route("/manage/create", name="manage_create")
-     */
-    public function createAction(){
-    
-    	// once updated , redirection to index manage page (listing)
-    	$msg = "The workflow has been created" ;
-    	return $this->redirect($this->generateUrl('manage', array('msg'=>$msg)));
-    }	
+  
     /**
      * @Route("/manage/update", name="manage_update")
      */   
@@ -88,7 +94,8 @@ class ManageController extends Controller
     		$em = $this->getDoctrine()->getManager();
     		$em->flush();
     		
-    		$msg = "yes ,The workflow has been updated" ;
+			$this->get('session')->getFlashBag()->add('notice', 'Vos changements ont été sauvegardés!');
+    		
     		
     	}else{
     		$msg = "Something wrong happened" ;
