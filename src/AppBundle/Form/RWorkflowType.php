@@ -1,22 +1,30 @@
 <?php
-// src/AppBundle/Form/RRuleType.php
+// src/AppBundle/Form/RWorkflow.php
 namespace AppBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
-class RRuleType extends AbstractType
+class RworkflowType extends AbstractType
 {
 	
-
+	private $nbChoiceThreads = 40 ;
 	
 	
 	public function buildForm(FormBuilderInterface $builder, array $options)
 	{
+
+		$configChoicesThread = $this->makeChoicesThreadList() ;
 		
-		$builder->add('ruleOrder', 'text')
-		 		->add('ruleType','entity',array('class'=>'AppBundle:RPublishingRuleType','property'=>'name', 'multiple'=>true, 'required' => false));
+		$builder->add('name', 'text')
+		 		->add('description', 'text')
+		 		->add('stub', 'text')
+		 		->add('publishing','entity', array('class'=>'AppBundle:RPublishing','property'=>'name'))
+		 		->add('auto', 'checkbox', array('required' => false))
+		 		->add('isConcat', 'checkbox', array('required' => false))
+		 		->add('ruleType','entity',array('class'=>'AppBundle:RPublishingRule','property'=>'ruleOrder', 'multiple'=>true, 'required' => false))
+		 		->add('farmId' ,'choice',$configChoicesThread);
 
 	}
 
@@ -25,15 +33,25 @@ class RRuleType extends AbstractType
 	public function setDefaultOptions(OptionsResolverInterface $resolver)
 	{
 		$resolver->setDefaults(array(
-				'data_class' => 'AppBundle\Entity\RPublishingRule',
+				'data_class' => 'AppBundle\Entity\RPublishingWorkflow',
 		));
 	}
 	
 	public function getName()
 	{
-		return 'rrule';
+		return 'rworkflow';
 	}
-
+	// creates a default list of values for  threads
+	private function makeChoicesThreadList(){
+		$choices =array() ;
+		for($a=1;$a<=$this->nbChoiceThreads;$a++){
+			$choices[$a]='thread '.$a	;
+		}
+		return array ('choices' => $choices ) ;
+	
+	
+	
+	}
 	
 	
 }
