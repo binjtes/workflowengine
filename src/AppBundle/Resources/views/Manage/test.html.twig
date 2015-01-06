@@ -1,0 +1,32 @@
+{# src/AppBundle/Resources/views/Manage/index.html.twig #}
+{% extends 'AppBundle:Manage:index.html.twig' %}
+{% block title %}Edit Workflows{% endblock %}
+
+{% block container %}
+   		 <div class="container">
+
+		      <div class="workflow_engine-template">
+		        <h1>TESTING<span class="glyphicon glyphicon-tower" aria-hidden="true"></span></h1>
+		        
+   		{{ form(form) }}
+
+			<div class="btn-group" role="group" aria-label="">
+			  <input class="btn btn-primary " value="Update" type="submit" >
+			
+			</div>
+	
+			
+		  
+		   
+		{{ form_end(form) }}
+		       
+		       
+		       
+		        </div>
+		     
+
+    	</div><!-- /.container -->
+    	{% include 'BraincraftedBootstrapBundle::flash.html.twig' %}
+ 		{% endblock %}
+
+

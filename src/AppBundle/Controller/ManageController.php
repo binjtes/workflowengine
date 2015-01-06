@@ -7,8 +7,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response ;
 use Symfony\Component\HttpFoundation\Request;
 use AppBundle\Entity\RPublishingWorkflow ;
+use AppBundle\Entity\RPublishingRule ;
 use Braincrafted\Bundle\BootstrapBundle\Session\FlashMessage ;
 use AppBundle\Form\RworkflowType ;
+use AppBundle\Form\RRuleType ;
 
 class ManageController extends Controller
 {
@@ -57,9 +59,12 @@ class ManageController extends Controller
     public function editAction($workflowid ){
     	
     	$workflow = $this->getDoctrine()->getRepository('AppBundle:RPublishingWorkflow')->find($workflowid);
+//     	$rule = new RPublishingRule() ;
+//     	$form =$this->createForm(new RRuleType(), $rule);
+    	
+//     	return $this->render('AppBundle:Manage:test.html.twig', array('form' => $form->createView()));
     	
     	$form = $this->createForm(new RworkflowType(), $workflow);
-
     	
     	$form->handleRequest($this->getRequest());
     	// once updated , redirection to index manage page (listing)

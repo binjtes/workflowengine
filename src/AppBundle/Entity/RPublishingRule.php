@@ -115,4 +115,11 @@ class RPublishingRule
     {
         return $this->ruleType;
     }
+    
+    public function __toString(){
+ 		return  $this->ruleType->getRuleTypeDescription();
+    	
+    
+    }
+    
 }

@@ -8,15 +8,13 @@ use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 class RRuleType extends AbstractType
 {
-	
 
-	
 	
 	public function buildForm(FormBuilderInterface $builder, array $options)
 	{
 		
 		$builder->add('ruleOrder', 'text')
-		 		->add('ruleType','entity',array('class'=>'AppBundle:RPublishingRuleType','property'=>'name', 'multiple'=>true, 'required' => false));
+		 		->add('ruleType','entity',array('class'=>'AppBundle:RPublishingRuleType','property'=>'ruleTypeDescription', 'multiple'=>true, 'required' => false));
 
 	}
 

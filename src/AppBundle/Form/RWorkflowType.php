@@ -23,7 +23,7 @@ class RworkflowType extends AbstractType
 		 		->add('publishing','entity', array('class'=>'AppBundle:RPublishing','property'=>'name'))
 		 		->add('auto', 'checkbox', array('required' => false))
 		 		->add('isConcat', 'checkbox', array('required' => false))
-		 		->add('ruleType','entity',array('class'=>'AppBundle:RPublishingRule','property'=>'ruleOrder', 'multiple'=>true, 'required' => false))
+		 		->add('ruleType','entity',array('class'=>'AppBundle:RPublishingRule', 'multiple'=>true, 'required' => false))
 		 		->add('farmId' ,'choice',$configChoicesThread);
 
 	}
