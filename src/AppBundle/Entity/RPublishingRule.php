@@ -122,4 +122,20 @@ class RPublishingRule
     
     }
     
+    
+    /**
+     * Filter ruleType on a given id
+     *
+     * 
+     */
+    public function getRuleTypeById($id)
+    {
+    	 
+    	$qb = $this->createQueryBuilder('a');
+    	$qb->where('a.workflow = :id')->setParameter('id', $id);
+    	 
+    	return $qb;
+    }
+    
+    
 }

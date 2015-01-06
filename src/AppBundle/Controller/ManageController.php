@@ -75,7 +75,7 @@ class ManageController extends Controller
     		$em->flush();
     		
 
-    		$this->get('session')->getFlashBag()->add('notice', 'Le nouveau workflow a Ã©tÃ© crÃ©Ã©');
+    		$this->get('session')->getFlashBag()->add('notice', 'Le nouveau workflow a été créé');
     		
     		return $this->redirect( $this->generateUrl('manage'));
     	}
