@@ -5,19 +5,28 @@ namespace AppBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
-use AppBundle\Entity\RPublishingRuleRepository;
+use AppBundle\Entity\RPublishingRuleRepository as RPublishingRuleRepository   ;
 class RworkflowType extends AbstractType
 {
 	
+	
 	private $nbChoiceThreads = 40 ;
+	private $id ;
+	
+	
+	
+	public function __construct($id = null){
+		$this->id = $id ;
+	}
+	
 	
 	
 	public function buildForm(FormBuilderInterface $builder, array $options)
 	{
 		// inspired by http://openclassrooms.com/forum/sujet/symfony2-entity-field-query-builder-90658
 		$configChoicesThread = $this->makeChoicesThreadList() ;
-		$id = 1 ;
 		
+		$id = $this->id ;
 		$builder->add('name', 'text')
 		 		->add('description', 'text')
 		 		->add('stub', 'text')
@@ -28,15 +37,15 @@ class RworkflowType extends AbstractType
 		 				'property' => 'ruleType.ruleTypeDescription',
 		 				'multiple'=>true, 
 		 				'required' => false,
-		 				'query_builder' => function(AppBundle\Entity\RPublishingRuleRepository $er)use ($id) {
-		 				 					return $er->getRuleTypeById($id);
+		 				'query_builder' => function(RPublishingRuleRepository $er) use ($id) {
+		 				 					 return $er->getRuleTypeByWorkflowId($id);
                                            }
 		 		))
 		 		->add('farmId' ,'choice',$configChoicesThread);
 
 	}
-
-
+	
+	
 	
 	public function setDefaultOptions(OptionsResolverInterface $resolver)
 	{
@@ -56,9 +65,6 @@ class RworkflowType extends AbstractType
 			$choices[$a]='thread '.$a	;
 		}
 		return array ('choices' => $choices ) ;
-	
-	
-	
 	}
 	
 	

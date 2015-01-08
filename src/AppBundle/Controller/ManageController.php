@@ -59,12 +59,8 @@ class ManageController extends Controller
     public function editAction($workflowid ){
     	
     	$workflow = $this->getDoctrine()->getRepository('AppBundle:RPublishingWorkflow')->find($workflowid);
-//     	$rule = new RPublishingRule() ;
-//     	$form =$this->createForm(new RRuleType(), $rule);
-    	
-//     	return $this->render('AppBundle:Manage:test.html.twig', array('form' => $form->createView()));
-    	
-    	$form = $this->createForm(new RworkflowType(), $workflow);
+
+    	$form = $this->createForm(new RworkflowType($workflowid), $workflow);
     	
     	$form->handleRequest($this->getRequest());
     	// once updated , redirection to index manage page (listing)

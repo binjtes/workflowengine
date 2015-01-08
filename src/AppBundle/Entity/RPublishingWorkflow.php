@@ -85,6 +85,7 @@ class RPublishingWorkflow
      * )
      */
     private $ruleType;
+    
 
     /**
      * Constructor
@@ -300,4 +301,9 @@ class RPublishingWorkflow
     {
         return $this->ruleType;
     }
+    
+  
+    
+    
+    
 }
