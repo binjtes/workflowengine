@@ -37,6 +37,7 @@ class RworkflowType extends AbstractType
 		 				'property' => 'ruleType.ruleTypeDescription',
 		 				'multiple'=>true, 
 		 				'required' => false,
+		 			
 		 				'query_builder' => function(RPublishingRuleRepository $er) use ($id) {
 		 				 					 return $er->getRuleTypeByWorkflowId($id);
                                            }

@@ -3,7 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
+use Doctrine\Common\Collections\ArrayCollection;
 /**
  * RPublishingWorkflow
  *
@@ -92,7 +92,7 @@ class RPublishingWorkflow
      */
     public function __construct()
     {
-    	$this->ruleType = new \Doctrine\Common\Collections\ArrayCollection();
+    	$this->ruleType = new ArrayCollection();
     }
     
 
@@ -290,6 +290,15 @@ class RPublishingWorkflow
     public function removeRuleType(\AppBundle\Entity\RPublishingRule $ruleType)
     {
         $this->ruleType->removeElement($ruleType);
+    }
+    
+    /**
+     * Remove all ruleType
+     *
+     */
+    public function removeAllRules()
+    {
+    	$this->ruleType = null ;
     }
 
     /**

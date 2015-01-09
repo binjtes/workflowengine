@@ -42,11 +42,12 @@ class ManageController extends Controller
     		$workflow = $form->getData();
     		$em->persist($workflow);
     		$em->flush();
-    	
-    		$msg = "yep ,The workflow has been updated" ;
+    		$this->get('session')->getFlashBag()->add('notice',   array(
+				        'alert' => 'success',
+				        'title' => 'Success!',
+				        'message' => 'the workflow has been created'));
     	
     	}
-    
     	
     	$rpublishingworkflows = $this->getDoctrine()->getRepository('AppBundle:RPublishingWorkflow')->findAll(); 
         return $this->render('AppBundle:Manage:index.html.twig', array('form' => $form->createView(), 'rpublishingworkflows'=>$rpublishingworkflows));
@@ -60,18 +61,50 @@ class ManageController extends Controller
     	
     	$workflow = $this->getDoctrine()->getRepository('AppBundle:RPublishingWorkflow')->find($workflowid);
 
+    	$types = $workflow->getRuleType() ; 
+    	
+    	foreach ($types as $type){
+    		$RuleType = $type->getRuleType();
+    		$this->get('session')->getFlashBag()->add('notice',    array(
+    				'alert' => 'success',
+    				'title' => $RuleType->getRuleTypeDescription(),
+    				'message' => 'retrieved from base'
+    		));
+    	
+    	
+    	}
+    	
     	$form = $this->createForm(new RworkflowType($workflowid), $workflow);
     	
     	$form->handleRequest($this->getRequest());
     	// once updated , redirection to index manage page (listing)
     	if ($form->isValid()) {
+    		
     		$em = $this->getDoctrine()->getManager();
     		$workflow = $form->getData();
+    		
+    		$types = $workflow->getRuleType() ;
+    		$workflow->removeAllRules();
+    		foreach ($types as $type){
+    				$em->persist($type) ;
+    				$RuleType = $type->getRuleType();
+    				$this->get('session')->getFlashBag()->add('notice',    array(
+    						'alert' => 'success',
+    						'title' => $RuleType->getRuleTypeDescription(),
+    						'message' => 'from form'
+    				));
+    				
+    				
+    		}
     		$em->persist($workflow);
     		$em->flush();
     		
 
-    		$this->get('session')->getFlashBag()->add('notice', 'Le nouveau workflow a été créé');
+    		$this->get('session')->getFlashBag()->add('notice',    array(
+				        'alert' => 'success',
+				        'title' => 'Success!',
+				        'message' => 'the workflow has been updated'
+				));
     		
     		return $this->redirect( $this->generateUrl('manage'));
     	}

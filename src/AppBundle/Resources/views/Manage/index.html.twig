@@ -13,7 +13,16 @@
 
 		      <div class="workflow_engine-template">
 		        <h1>Manage workflows <span class="glyphicon glyphicon-tower" aria-hidden="true"></span></h1>
-		      
+				{% if app.session.started %}
+				    {% for flashMessage in app.session.flashbag.get('notice') %}
+				        <div class="alert alert-{{ flashMessage.alert }} alert-dismissible" role="alert">
+				            <button type="button" class="close" data-dismiss="alert">
+				                <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+				            </button>
+				            <strong>{{ flashMessage.title }}</strong> {{ flashMessage.message }}
+				        </div>
+				    {% endfor %}
+				{% endif %}
   				<div class="row">
       				<div class="col-xs-6 col-md-7"><h2>publishing workflows</h2></div>
  
